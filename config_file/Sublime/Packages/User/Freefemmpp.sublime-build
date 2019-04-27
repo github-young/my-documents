@@ -1,0 +1,4 @@
+{
+    //"shell_cmd": ["freefem++","$file"]
+    "cmd": ["freefem++","$file"],
+}

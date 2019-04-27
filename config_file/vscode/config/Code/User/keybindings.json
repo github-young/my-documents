@@ -1,0 +1,25 @@
+// 将按键绑定配置放入此文件中即可覆盖默认值
+[
+    {
+        "key": "ctrl+b",
+        "command": "latex-workshop.build",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-latex-workshop.build",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+shift+alt+b",
+        "command": "latex-workshop.recipes"
+    }
+]

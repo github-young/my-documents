@@ -1,0 +1,87 @@
+{
+  //Vim
+  "vim.overrideCopy": false,
+  "vim.yseCtrlKey": false,
+  //Markdown Preview Enhanced
+  "markdown-preview-enhanced.enableScriptExecution": true,
+  "search.smartCase": true,
+  //Python
+  "python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
+  "python.linting.enabled": true,
+  "files.autoSave": "onFocusChange",
+  "editor.wordWrap": "on",
+  //syncing
+  //gist = 9a5d7c4bd7242257bab8a3e6554989f1
+  //LaTeX-Workshop
+  "latex-workshop.view.pdf.viewer": "external",
+  "latex-workshop.view.pdf.external.command": {
+    "command": "sumatra",
+    "args": [
+      "%PDF%"
+    ]
+  },
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.magic.args": [
+    "-synctex=1",
+    "-interaction=nonstopmode",
+    "-file-line-error",
+    "-shell-escape",
+    "%DOCFILE%"
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex",
+      "tools": [
+        "xelatex"
+      ]
+    },
+    {
+      "name": "xelatex -> bibtex -> xelatex*2",
+      "tools": [
+        "xelatex",
+        "bibtex",
+        "xelatex",
+        "xelatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "-pdf",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "-pdf",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": true,
+  "markdown-preview-enhanced.scrollSync": false,
+  "editor.minimap.enabled": true,
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "java.errors.incompleteClasspath.severity": "ignore"
+}

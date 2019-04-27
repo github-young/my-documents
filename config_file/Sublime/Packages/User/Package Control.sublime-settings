@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ChineseLocalizations",
+		"Conda",
+		"ConvertToUTF8",
+		"Emmet",
+		"LaTeX-cwl",
+		"LaTeXTools",
+		"Package Control",
+		"Python 3",
+		"Terminal"
+	]
+}

@@ -1,0 +1,9 @@
+ConvertToUTF8
+LaTeXTools
+markupsafe
+mdpopups
+pygments
+python-jinja2
+python-markdown
+SublimeREPL
+ZZZZZZZZ-Localization

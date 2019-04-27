@@ -1,0 +1,11 @@
+keycode 66 = Mode_switch Mode_switch Mode_switch Mode_switch Mode_switch Mode_switch
+
+keycode 110 = Home NoSymbol Home
+keycode 111 = Up NoSymbol Prior
+keycode 112 = Prior NoSymbol Prior
+keycode 113 = Left NoSymbol Home NoSymbol Home NoSymbol
+keycode 114 = Right NoSymbol End NoSymbol End NoSymbol
+keycode 115 = End NoSymbol End
+keycode 116 = Down NoSymbol Next
+
+keycode 133 = Super_L
