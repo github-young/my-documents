@@ -144,9 +144,8 @@ unset __conda_setup
 
 conda deactivate
 
-# VSCode LaTeX Workshop
-#export PATH="/home/young/.vscode/extensions/James-Yu.latex-workshop-5.19.0/scripts:$PATH"
-#export PATH="/home/young/Downloads/latexindent:$PATH"
+## DO NOT let conda init after installation!
+#eval "$(/home/young/miniconda3/bin/conda shell.zsh hook)"
 
 # TeXLive 2018
 export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
