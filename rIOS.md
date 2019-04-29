@@ -74,7 +74,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 Config zshrc: 
 
 ```shell
-ZSH_THEME="agnoster"
+ZSH_THEME="myagnoster" # comment the "context" line at the end of this theme
 plugins=(
   git
   zsh-syntax-highlighting
