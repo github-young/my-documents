@@ -1,0 +1,12 @@
+# some more ls aliases
+alias i='/home/young/in.sh'
+alias o='/home/young/out.sh'
+alias ll='ls -alhF'
+alias l='ls -CF'
+alias cp='cp -i'
+alias e='exit'
+alias clc='clear'
+alias fy='dict -d langdao-ec'
+alias fyy='dict -d langdao-ce'
+#alias free='free -h'
+alias how='tldr'
