@@ -16,6 +16,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - Git
       - Python: Anaconda/Miniconda (with Spyder3)
       - Java and Others: JDK, Android Studio, flutter, adb
+      - hugo
    - Ladder: 
       - ssr/electron-ssr
       - lantern
@@ -97,6 +98,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - tldr (-> alias to how)
    - tlp (with: cpufrequtils)
    - earlyoom
+   - pdftk
    - Media: 
       - GIMP
       - NetEase Cloud Music/musicbox
