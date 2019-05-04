@@ -1,7 +1,7 @@
 {
   //Vim
   "vim.overrideCopy": false,
-  "vim.useCtrlKey": false,
+  "vim.useCtrlKeys": false,
   //Markdown Preview Enhanced
   "markdown-preview-enhanced.enableScriptExecution": true,
   "markdown-preview-enhanced.scrollSync": false,
