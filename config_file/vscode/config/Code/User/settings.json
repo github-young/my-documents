@@ -77,7 +77,12 @@
   "markdown.preview.fontSize": 18,
   "latex-workshop.message.update.show": false,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 4,
+  "editor.renderControlCharacters": false,
+  "breadcrumbs.enabled": false,
+  "editor.detectIndentation": false,
+  //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   //Java
-  "java.errors.incompleteClasspath.severity": "ignore"
+  //"java.errors.incompleteClasspath.severity": "ignore"
 }
