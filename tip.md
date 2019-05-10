@@ -281,3 +281,23 @@
    ```shell
    redshift -l 32.05:118.766 -t 5500:3500
    ```
+
+1. dict字典
+   ```shell
+   sudo apt install dict dictd
+   sudo systemctl enable dictd.service
+   sudo cp langdao-* /usr/share/dictd/
+   sudo vim /var/lib/dictd/db.list
+   ```
+   写入
+   ```
+   database langdao-ce {
+     data  /usr/share/dictd/langdao-ce.dict.dz
+     index /usr/share/dictd/langdao-ce.index
+   }
+   database langdao-ec {
+     data  /usr/share/dictd/langdao-ec.dict.dz
+     index /usr/share/dictd/langdao-ec.index
+   }
+   ```
+   然后重启dictd服务。
