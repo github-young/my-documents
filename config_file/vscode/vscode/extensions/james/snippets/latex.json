@@ -143,18 +143,18 @@
 	},
 	"equation": {
 		"prefix": "BEQ",
-		"body": "\\begin{equation}\n$0\\label{${1:<label>}}\n\\end{equation}",
+		"body": "\\begin{equation}\n$0\\label{${1:eq:<label>}}\n\\end{equation}",
 		"description": "Insert an equation environment"
 	},
 	"figure": {
 		"prefix": "BFG",
-		"body": "\\begin{figure}[!h]\n\\centering\n\\includegraphics[width=${2:width}\\textwidth]{${0:name}}\n\\caption{${3:caption}}\\label{${1:<label>}}\n\\end{figure}",
+		"body": "\\begin{figure}[!h]\n\\centering\n\\includegraphics[width=${2:width}\\textwidth]{${0:name}}\n\\caption{${3:caption}}\\label{${1:fig:<label>}}\n\\end{figure}",
 		"description": "Insert a figure environment"
 	},
 
 	"eqnarray": {
 		"prefix": "BEQN",
-		"body": "\\begin{eqnarray}\n$0\\label{${1:<label>}}\n\\end{eqnarray}",
+		"body": "\\begin{eqnarray}\n$0\\label{${1:eqn:<label>}}\n\\end{eqnarray}",
 		"description": "Insert an eqnarray environment"
 	},
 	"eqnarray*": {
