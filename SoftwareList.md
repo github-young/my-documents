@@ -99,6 +99,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - tlp (with: cpufrequtils)
    - earlyoom
    - pdftk
+   - filelight
    - Media: 
       - GIMP
       - NetEase Cloud Music/musicbox

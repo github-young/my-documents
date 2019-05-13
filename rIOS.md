@@ -26,7 +26,8 @@
 #### After
 
 0. 切换源(tuna)
-1. 设置快捷键：Super+E/X/L, Alt+T/C
+1. 设置快捷键：Super+E/X/L/Z, Alt+T/C
+   看`` /usr/share/applications/dde-control-center.desktop ``里面的exec的写法，配置控制中心和文件管理器。
 1. 更新系统
 1. 安装软件：见`` SoftwareList.md ``
 1. 复制配置文件：见`` config_file ``
