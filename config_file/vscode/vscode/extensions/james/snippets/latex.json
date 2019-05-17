@@ -143,12 +143,12 @@
 	},
 	"equation": {
 		"prefix": "BEQ",
-		"body": "\\begin{equation}\n$0\\label{${1:eq:<label>}}\n\\end{equation}",
+		"body": "\\begin{equation}\n$0\\label{eq1:${1:<label>}}\n\\end{equation}",
 		"description": "Insert an equation environment"
 	},
 	"figure": {
 		"prefix": "BFG",
-		"body": "\\begin{figure}[!h]\n\\centering\n\\includegraphics[width=${2:width}\\textwidth]{${0:name}}\n\\caption{${3:caption}}\\label{${1:fig:<label>}}\n\\end{figure}",
+		"body": "\\begin{figure}[!h]\n\\centering\n\\includegraphics[width=${2:width}\\textwidth]{${0:name}}\n\\caption{${3:caption}}\\label{fig:${1:<label>}}\n\\end{figure}",
 		"description": "Insert a figure environment"
 	},
 
@@ -162,12 +162,16 @@
 		"body": "\\begin{eqnarray*}\n$0\\label{${1:<label>}}\n\\end{eqnarray*}",
 		"description": "Insert an eqnarray* environment"
 	},
-
 	"equation*": {
 		"prefix": "BEQS",
 		"body": "\\begin{equation*}\n\t$0\n\\end{equation*}",
 		"description": "Insert an equation* environment"
 	},
+    "sum with limits": {
+        "prefix": "suml",
+        "body": "\\sum\\limits_{$0}",
+        "description": "Insert a sum with limits"
+    },
 	"align": {
 		"prefix": "BAL",
 		"body": "\\begin{align}\n\t\\label{${1:<label>}}\n\t$0\n\\end{align}",
