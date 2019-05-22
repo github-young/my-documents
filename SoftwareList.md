@@ -13,7 +13,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - Editor: 
          - VSCode：Chinese Language Pack, LaTeX Workshop, MPE, Python, Vim, Sycing, Java, Flutter
          - Sublime：PC, (Chinese)Localization, Conda, Python, Emmet, ConvertToUTF8, LaTeXTools, LaTeX-cwl, Terminal
-      - Git
+      - Git (git-lfs)
       - Python: Anaconda/Miniconda (with Spyder3)
       - Java and Others: JDK, Android Studio, flutter, adb
       - hugo
