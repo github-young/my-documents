@@ -2,27 +2,27 @@
 
 1. 包管理器报错：
    - yum: 
-      ```shell
+      ```sh
       sudo rm -rf /var/run/yum.pid
       ```
    - apt: 
-      ```shell
+      ```sh
       sudo rm /var/cache/apt/archives/lock
       sudo rm /var/lib/dpkg/lock
       ```
 
 1. touchpad:
-   ```shell
+   ```sh
    synclient TapButton1=1
    ```
 
 1. g++:
-   ```shell
+   ```sh
    g++ filename.cpp -o filename
    ```
 
 1. Install VMD:
-   ```shell
+   ```sh
    tar xvf vmd_xxx.tar.gz
    ./configure LINUX(or LINUXAMD64)
    ./confgiure
@@ -31,18 +31,18 @@
    ```
 
 1. 输入法图标消失怎么办？
-   ```shell
+   ```sh
    kill all ibus-daemon #（结束进程）
    ibus-daemon -d #（重启ibus）
    ```
 
 1. 卸载已安装的rpm包:
-   ```shell
+   ```sh
    sudo rpm -e --nodeps xxx
    ```
 
 1. ubuntu亮度:
-   ```shell
+   ```sh
    sudo vim /etc/default/grub
    GRUB_CMDLINE_LINUX="acpi_osi=Linux acpi_backlight=vendor"
    sudo update-grub(dangerous!)
@@ -50,7 +50,7 @@
    ```
 
 1. 命令行上网
-   ```shell
+   ```sh
    curl http://p.nju.edu.cn/portal_io/login -d username=xxxxxxxxx -d password=xxxxxxxx
    curl http://p.nju.edu.cn/portal_io/logout
    sudo apt install w3m w3m-img
@@ -68,7 +68,7 @@
    1. 记得要 ``sudo`` 运行安装脚本
    1. 安装到iso1结束时，直接unmount iso1，双击打开iso2
    1. 安装结束后，要把matlab添加到启动器：``sudo vim /usr/share/applications/matlab.desktop``，写入以下内容：
-      ```shell
+      ```sh
       [Desktop Entry]
       Name=matlab
       Comment=matlab
@@ -82,14 +82,14 @@
       ```
 
 1. 单击图标最小化：
-   ```shell
+   ```sh
    gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
    ```
    - 现在用gnome-twaek-tools即可。
 
 1. 命令行广播：
    1. record and replay:
-      ```shell
+      ```sh
       #record: 
       script -t 2> timing.log output.session
       #type you cmds, use 'exit' to terminate
@@ -99,7 +99,7 @@
       ```
    
    1. real-time broadcasting:
-      ```shell
+      ```sh
       #in terminal 1(broadcaster)
       mkfifo scriptfifo
       #in terminal 2(audience)
@@ -110,12 +110,12 @@
       ```
 
 1. 生成大文件
-   ```shell
+   ```sh
    dd if=/dev/zero of=junk.data bs=1M count=1
    ```
 
 1. kill进程：
-   ```shell
+   ```sh
    sudo kill -s 9 pid
    ```
 
@@ -125,25 +125,25 @@
    - 把这个winewrapper.exe.so替换``/opt/cxoffice/lib/wine/``的那个so
 
 1. 搭建ftp服务器的防火墙设置(if necessary)：
-   ```shell
+   ```sh
    iptables -I INPUT -p tcp --dport 20 -j ACCEPT
    iptables -I INPUT -p tcp --dport 21 -j ACCEPT
    ```
 
 1. centos关闭图形界面：
-   ```shell
+   ```sh
    sudo vim /etc/inittab #line 12-14, modify as below:
    #ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target (这是默认开机图形界面)
    #ln -sf /lib/systemd/system/multiuser.target /etc/systemd/system/default.target (这是默认开机命令行界面)
    ```
 
 1. save power:
-   ```shell
+   ```sh
    sudo apt install tlp cpufrequtils
    ```
 
 1. gedit run python plugin:
-   ```shell
+   ```sh
    #!/bin/bash
    gnome-terminal -x $SHELL -ic "python $GEDIT_DOCUMENTS_PATH; printf \"\nPress any key to continue.\"; read -n 1 -s"
    #set +m
@@ -172,7 +172,7 @@
    ```
 
 1. 制作iso文件：
-   ```shell
+   ```sh
    #install mkisofs
    # -m means exclude some file
    # -J is related with Windows. See the manual.
@@ -183,7 +183,7 @@
    ``C:\Users\username\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs``
 
 1. ffmpeg:
-   ```shell
+   ```sh
    ffmpeg -i input.mp4 -vf "crop=width:height:x:y" -b 4000k -t 20 output.mp4
    ```
 
@@ -202,14 +202,14 @@
    但是没有tlmgr包管理器，有点不方便。
    (中文问题：下载ctex宏包放到``/usr/share/texmf/tex/latex``里面，解压，然后``sudo texhash``)
    1. 如果一定要用texlive的iso。那么安装完了，首先试一下中文行不行，不行的话，要把Windows上的几种主要中文字体复制到 `` /etc/fonts/winfonts `` 下，然后执行：
-      ```shell
+      ```sh
       sudo chmod 644 winfonts
       sudo mkfontdir
       sudo mkfontscale
       sudo fc-cache -fv
       ```
       刷新字体缓存。这一步的目的是使texlive支持中文。下一步才来解决格式化文件的问题。点一下格式化文件，查看LaTeX Workshop的输出，应该是缺少一些perl的工具，执行：
-      ```shell
+      ```sh
       sudo perl -MCPAN -e shell
       ```
       进入perl的shell，然后按缺失的包的名字安装。
@@ -244,7 +244,7 @@
 1. Deepin安装Docker-ce：
    参考[Deepin Wiki](https://wiki.deepin.org/wiki/Docker)。
    安装
-   ```shell
+   ```sh
    sudo apt remove docker.io docker-engine
    sudo apt install apt-transport-https ca-certificates curl python-software-properties software-properties-common
    curl -fsSL https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian/gpg | sudo apt-key add - #OR:
@@ -262,7 +262,7 @@
    sudo usermod -aG docker $USER
    ```
    配置docker-cn镜像源：
-   ```shell
+   ```sh
    sudo vim /etc/docker/daemon.json
    ```
    写入：
@@ -273,17 +273,17 @@
    ```
 
 1. 安装hexo报错：
-   ```shell
+   ```sh
    sudo npm install --unsafe-perm --verbose -y hexo-cli
    ```
 
 1. 手动redshift：
-   ```shell
+   ```sh
    redshift -l 32.05:118.766 -t 5500:3500
    ```
 
 1. dict字典
-   ```shell
+   ```sh
    sudo apt install dict dictd
    sudo systemctl enable dictd.service
    sudo cp langdao-* /usr/share/dictd/
@@ -301,3 +301,20 @@
    }
    ```
    然后重启dictd服务。
+
+1. conda的spyder添加到快捷方式：
+   ```sh
+   sudo vim /usr/share/applications/spyder3.desktop
+   # and add:
+   [Desktop Entry]
+   Comment=Spyder3 from Conda
+   Exec=/home/young/miniconda3/bin/spyder
+   Encoding=UTF-8
+   GenericName=Spyder3
+   Name=Spyder3
+   StartupNotify=true
+   Terminal=false
+   Type=Application
+   Categories=Development;
+   Icon=/home/young/miniconda3/pkgs/spyder-3.3.4-py37_0/share/icons/spyder3.png
+   ```
