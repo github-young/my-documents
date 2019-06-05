@@ -45,6 +45,15 @@
         "xelatex"
       ]
     }
+    {
+        "name": "xelatex -> biber -> xelatex*2",
+        "tools": [
+          "xelatex",
+          "biber",
+          "xelatex",
+          "xelatex"
+        ]
+      }
   ],
   "latex-workshop.latex.tools": [
     {
@@ -66,6 +75,13 @@
         "%DOCFILE%"
       ]
     }
+    {
+        "name": "biber",
+        "command": "biber",
+        "args": [
+          "%DOCFILE%"
+        ]
+      }
   ],
   "workbench.activityBar.visible": false,
   "workbench.statusBar.visible": true,
@@ -81,8 +97,9 @@
   "editor.tabSize": 4,
   "editor.renderControlCharacters": false,
   "breadcrumbs.enabled": false,
-  "editor.detectIndentation": false,
+"editor.detectIndentation": false,
+"python.jediEnabled": false,
   //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   //Java
-  //"java.errors.incompleteClasspath.severity": "ignore"
+  //"java.errors.incompleteClasspath.severity": "ignore",
 }

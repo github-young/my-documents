@@ -101,7 +101,5 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-## DO NOT let conda init after installation!
-#eval "$(/home/young/miniconda3/bin/conda shell.zsh hook)"
+export PATH="$PATH:/home/young/miniconda3/bin/:/home/young/.local/bin/:/usr/local/go/bin:."
 
-export PATH="$PATH:/home/young/miniconda3/bin/:."
