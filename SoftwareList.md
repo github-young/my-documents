@@ -9,7 +9,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - TeamViewer
       - VMware
    - Study/Dev: 
-      - TeXLive, MMA, Mendeley, Inkscape
+      - TeXLive, MMA, Mendeley, Inkscape(TexText)
       - Editor: 
          - VSCode：Chinese Language Pack, LaTeX Workshop, MPE, Python, Vim, Sycing, Java, Flutter
          - Sublime：PC, (Chinese)Localization, Conda, Python, Emmet, ConvertToUTF8, LaTeXTools, LaTeX-cwl, Terminal
