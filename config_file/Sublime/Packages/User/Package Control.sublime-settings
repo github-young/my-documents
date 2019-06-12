@@ -6,13 +6,12 @@
 	"installed_packages":
 	[
 		"ChineseLocalizations",
-		"Conda",
 		"ConvertToUTF8",
-		"Emmet",
+		"Golang Build",
+		"Javatar",
 		"LaTeX-cwl",
 		"LaTeXTools",
 		"Package Control",
-		"Python 3",
-		"Terminal"
+		"Python 3"
 	]
 }
