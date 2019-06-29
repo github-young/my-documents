@@ -3,6 +3,8 @@
 ### 写在最前
 <font color='red'><b>1. 备份重要文件！</b></font>
 
+---
+
 ### Windows
 
 #### Before
@@ -13,6 +15,7 @@
 
 #### After
 
+---
 
 ### Linux: Deepin
 
@@ -26,6 +29,7 @@
 #### After
 
 0. 切换源(tuna)
+1. 设置控制中心的设置（见controlcenter.md）
 1. 设置快捷键：Super+E/X/L/Z, Alt+T/C
    看`` /usr/share/applications/dde-control-center.desktop ``里面的exec的写法，配置控制中心和文件管理器。
 1. 更新系统
@@ -45,7 +49,7 @@
 FIRST
 
 ```shell
-# change SigLevel !!
+# change SigLevel if necessary!!
 sudo pacman -Sy
 sudo pacman -Syy
 sudo pacman -Su
@@ -88,7 +92,7 @@ Install sogoupinyin
 ```shell
 sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
-sudo pacman -S fcitx-sogoupinyin
+sudo pacman -S fcitx-sogoupinyin (or rime)
 vim ~/.xprofile
 ```
 
