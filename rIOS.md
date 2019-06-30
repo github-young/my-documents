@@ -54,7 +54,6 @@
 1. 配置控制中心，然后注销
 
 1. 更新
-
 ```shell
 sudo pacman-mirrors -i -m rank -c China
 sudo pacman -S archlinux-keyring (not sure)
@@ -75,7 +74,6 @@ sudo pacman -Su
 然后重启
 
 1. 安装和配置on-my-zsh
-
    1. 按照官网安装
    ```shell
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -95,15 +93,12 @@ sudo pacman -Su
    ```
 
 1. 输入法
-
 ```shell
 sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
 sudo pacman -S fcitx-sogoupinyin (or rime)
 ```
-
 然后`` vim ~/.xprofile ``，写入：
-
 ```shell
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
