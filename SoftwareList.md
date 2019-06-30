@@ -105,6 +105,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - GIMP
       - NetEase Cloud Music/musicbox
       - vlc/smplayer/mpv
+   - oh-my-zsh
 
 [+] Study/Dev: 
    - gnuplot
