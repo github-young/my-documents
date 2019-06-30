@@ -31,72 +31,78 @@
 0. 切换源(tuna)
 1. 设置控制中心的设置（见`` controlcenter.json ``）
 1. 设置快捷键：Super+E/X/L/Z, Alt+T/C
-   看`` /usr/share/applications/dde-control-center.desktop ``里面的exec的写法，配置控制中心和文件管理器。
+   看`` /usr/share/applications/dde-control-center.desktop ``里面的exec的写法，配置控制中心
 1. 更新系统
 1. 安装软件：见`` SoftwareList.md ``
 1. 复制配置文件：见`` config_file ``
-1. 复制Windows字体
+1. 复制Windows字体并安装
 
 
 ### Linux: Manjaro
 
+#### Before
+
+刻盘时注意使用`` dd ``模式
+
 #### During
 
-`` /boot/efi `` with `` boot `` and `` esp `` label.
+ - 分区时注意分一个`` /boot/efi ``分区，并勾选`` boot ``和`` esp ``标签
+ - 地区选上海，语言选en_US
 
 #### After
 
-FIRST
+1. 配置控制中心，然后注销
+
+1. 更新
 
 ```shell
-# change SigLevel if necessary!!
+sudo pacman-mirrors -i -m rank -c China
+sudo pacman -S archlinux-keyring (not sure)
 sudo pacman -Sy
 sudo pacman -Syy
+# change SigLevel if necessary!!
 sudo pacman -Su
 ```
+然后重启
 
-REBOOT
-
-Add archlinuxcn: See tuna
+1. 添加archlinuxcn:，见tuna
 ```shell
 sudo pacman -S archlinuxcn-keyring
 sudo pacman -Sy
 sudo pacman -Syy
 sudo pacman -Su
 ```
+然后重启
 
-REBOOT as necessary
+1. 安装和配置on-my-zsh
 
-Install oh-my-zsh
+   1. 按照官网安装
+   ```shell
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+   ```
 
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-```
+   1. 配置zshrc: 
+   ```shell
+   ZSH_THEME="myagnoster" # comment the "context" line at the end of this theme
+   plugins=(
+     git
+   zsh-syntax-highlighting
+   zsh-autosuggestions
+   )
+   ```
 
-Config zshrc: 
-
-```shell
-ZSH_THEME="myagnoster" # comment the "context" line at the end of this theme
-plugins=(
-  git
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-)
-```
-
-Install sogoupinyin
+1. 输入法
 
 ```shell
 sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
 sudo pacman -S fcitx-sogoupinyin (or rime)
-vim ~/.xprofile
 ```
 
-Write in:
+然后`` vim ~/.xprofile ``，写入：
 
 ```shell
 export GTK_IM_MODULE=fcitx
