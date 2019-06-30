@@ -1,32 +1,33 @@
-## 重装系统备忘录
+# 重装系统备忘录
 
-### 写在最前
-<font color='red'><b>1. 备份重要文件！</b></font>
+## 写在最前
+
+**备份重要文件！**
 
 ---
 
-### Windows
+## Windows
 
-#### Before
+### Before
 用户目录下的所有个人文件夹包括但不限于：`` Desktop, Documents, Downloads, Pictures ``; `` .ssh/id_rsa* ``
 
-#### During
+### During
 检查引导模式+磁盘分区格式(UEFI+GPT)
 
-#### After
+### After
 
 ---
 
-### Linux: Deepin
+## Linux: Deepin
 
-#### Before
+### Before
 用户目录下的所有个人文件夹包括但不限于：`` Desktop, Documents, Downloads, Pictures ``; `` .ssh/id_rsa* ``
 
-#### During
+### During
 
 注意要分一个`` efi ``分区并在此放置bootloader
 
-#### After
+### After
 
 0. 切换源(tuna)
 1. 设置控制中心的设置（见`` controlcenter.json ``）
@@ -37,19 +38,20 @@
 1. 复制配置文件：见`` config_file ``
 1. 复制Windows字体并安装
 
+---
 
-### Linux: Manjaro
+## Linux: Manjaro
 
-#### Before
+### Before
 
 刻盘时注意使用`` dd ``模式
 
-#### During
+### During
 
  - 分区时注意分一个`` /boot/efi ``分区，并勾选`` boot ``和`` esp ``标签
  - 地区选上海，语言选en_US
 
-#### After
+### After
 
 1. 配置控制中心，然后注销
 
