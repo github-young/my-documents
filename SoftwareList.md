@@ -57,7 +57,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - HD Tune
       - AIDA64
       - DG
-      - ext2fsd
+      - ~~ext2fsd~~ bad bad software!
 
 [+] Study/Dev: 
    - Sumatra
