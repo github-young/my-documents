@@ -17,6 +17,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - Python: Anaconda/Miniconda (with Spyder3)
       - Java and Others: JDK, Android Studio, flutter, adb
       - hugo
+      - go
    - Ladder: 
       - ssr/electron-ssr
       - lantern
