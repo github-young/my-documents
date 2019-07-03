@@ -95,6 +95,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - gdebi
    - gnome-tweak-tools
    - htop
+   - notepadqq
    - WPS
    - Sogou/RIME Input Method
    - tldr (-> alias to how)
