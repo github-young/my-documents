@@ -9,7 +9,7 @@
 ## Windows
 
 ### Before
-用户目录下的所有个人文件夹包括但不限于：`` Desktop, Documents, Downloads, Pictures ``; `` .ssh/id_rsa* ``
+用户目录下的所有个人文件夹包括但不限于：`` Desktop, Documents, Downloads, Pictures ``; `` .ssh/id_rsa* ``，浏览器收藏夹同步
 
 ### During
 检查引导模式+磁盘分区格式(UEFI+GPT)
@@ -21,7 +21,7 @@
 ## Linux: Deepin
 
 ### Before
-用户目录下的所有个人文件夹包括但不限于：`` Desktop, Documents, Downloads, Pictures ``; `` .ssh/id_rsa* ``
+用户目录下的所有个人文件夹包括但不限于：`` Desktop, Documents, Downloads, Pictures ``; `` .ssh/id_rsa* ``，Firefox同步，Mendeley迁移准备
 
 ### During
 
