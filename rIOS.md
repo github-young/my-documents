@@ -58,9 +58,8 @@
 1. 更新
    ```shell
    sudo pacman-mirrors -i -m rank -c China
-   sudo pacman -S archlinux-keyring (not sure)
-   sudo pacman -Sy
    sudo pacman -Syy
+   sudo pacman -S archlinux-keyring (not sure)
    # change SigLevel if necessary!!
    sudo pacman -Su
    ```
