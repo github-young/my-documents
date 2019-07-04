@@ -65,7 +65,7 @@
    ```
    然后重启
 
-1. 添加archlinuxcn:，见tuna
+1. 添加archlinuxcn和AUR:，见tuna
    ```shell
    sudo pacman -S archlinuxcn-keyring
    sudo pacman -Sy
