@@ -101,7 +101,7 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
 
 export PATH="$PATH:/home/young/miniconda3/bin/:/home/young/.local/bin/:$GOROOT/bin:."
 
