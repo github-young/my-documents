@@ -5,7 +5,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 
 ### Misc/Cross Platform: 
    - Common:
-      - Browser: Firefox, Chrome
+      - Browser: Firefox, Chrome (with accounts)
       - TeamViewer
       - VMware
    - Study/Dev: 
@@ -14,7 +14,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
          - VSCode：Chinese Language Pack, LaTeX Workshop, MPE, Python, Vim, Sycing, Java, Flutter, Go
          - Sublime：PC, (Chinese)Localization, Conda, Python, Emmet, ConvertToUTF8, LaTeXTools, LaTeX-cwl, Terminal
       - Git (git-lfs)
-      - Python: Anaconda/Miniconda (with Spyder3)
+      - Python: Anaconda/Miniconda (with Spyder3, with tuna source)
       - Java and Others: JDK, Android Studio, flutter, adb
       - hugo
       - go
@@ -91,13 +91,13 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - curl
    - cups(cups-pdf with chmod 4755(700) /usr/bin/cups/backend/cups-pdf and putput path in /etc/cups)
    - wget
-   - vim
+   - vim (with config)
    - gdebi
    - gnome-tweak-tools
    - htop
    - notepadqq
-   - WPS
-   - Sogou/RIME Input Method
+   - WPS (`` sudo chmod -x /usr/lib/office6/wpsoffice `` to stop wps after closing it)
+   - Sogou/RIME Input Method (with config)
    - tldr (-> alias to how)
    - tlp (with: cpufrequtils)
    - earlyoom
@@ -107,14 +107,14 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - GIMP
       - NetEase Cloud Music/musicbox
       - vlc/smplayer/mpv
-   - oh-my-zsh
+   - oh-my-zsh (with config)
 
 [+] Study/Dev: 
    - gnuplot
    - g++
    - Spyder3
-   - dict, dictd (langdao-ec)
-   - docker
+   - dict, dictd (langdao-ec, see `` tip.md ``)
+   - docker 
 
 #### Server
 [+] Extra: 
