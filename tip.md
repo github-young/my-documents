@@ -283,6 +283,7 @@
    ```
 
 1. dict字典
+   1. For debian/ubuntu/deepin:
    ```sh
    sudo apt install dict dictd
    sudo systemctl enable dictd.service
@@ -301,6 +302,21 @@
    }
    ```
    然后重启dictd服务。
+
+   1. For Manjaro (See Arch Wiki in Firefox)
+   ```sh
+   sudo pacman -S dictd
+   sudo cp langdao* /usr/share/dictd/
+   sudo vim /etc/dict/dictd.conf
+   ```
+   写入
+   ```
+   database langdao-ce  { data  "/usr/share/dictd/langdao-ce.dict.dz"
+                          index "/usr/share/dictd/langdao-ce.index"  }
+   database langdao-ec  { data  "/usr/share/dictd/langdao-ec.dict.dz"
+                          index "/usr/share/dictd/langdao-ec.index"  }
+   ```
+   然后重启电脑。
 
 1. conda的spyder添加到快捷方式：
    ```sh
