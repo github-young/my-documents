@@ -318,3 +318,8 @@
    Categories=Development;
    Icon=/home/young/miniconda3/pkgs/spyder-3.3.4-py37_0/share/icons/spyder3.png
    ```
+1. Linux压缩图片大小
+   ```sh
+   # install imagemagick
+   convert -quality 75 xxx.jpg xxx.jpg
+   ```
