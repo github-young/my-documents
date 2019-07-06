@@ -88,6 +88,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 
 [+] Common: 
    - aria2
+   - Audacity
    - curl
    - cups(cups-pdf with chmod 4755(700) /usr/bin/cups/backend/cups-pdf and putput path in /etc/cups)
    - wget
