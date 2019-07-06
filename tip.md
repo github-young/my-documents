@@ -334,6 +334,7 @@
    Categories=Development;
    Icon=/home/young/miniconda3/pkgs/spyder-3.3.4-py37_0/share/icons/spyder3.png
    ```
+
 1. Linux压缩图片大小
    ```sh
    # install imagemagick
@@ -344,4 +345,9 @@
    cd /usr/local/Wolfram/Mathematica/11.3/SystemFiles/Libraries/Linux-x86-64
    sudo mv libfreetype.so.6 libgreetype.so.6.bak
    sudo mv libz.so.1 libz.so.1.bak
+   ```
+1. Manjaro的Java版本：
+   ```sh
+   which/where/whereis java
+   sudo ln -s $JAVA_12_PATH $CURRENT_JAVA_PATH_LINK
    ```
