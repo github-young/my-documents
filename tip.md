@@ -339,3 +339,9 @@
    # install imagemagick
    convert -quality 75 xxx.jpg xxx.jpg
    ```
+1. Manjaro安装Mathematica无法启动：
+   ```sh
+   cd /usr/local/Wolfram/Mathematica/11.3/SystemFiles/Libraries/Linux-x86-64
+   sudo mv libfreetype.so.6 libgreetype.so.6.bak
+   sudo mv libz.so.1 libz.so.1.bak
+   ```
