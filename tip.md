@@ -381,3 +381,7 @@
       <glob pattern="*.pdf" weight="80"/>
    </mime-type>
    ```
+   然后刷新MIME缓存：
+   ```sh
+   sudo update-mime-database /usr/share/mime
+   ```
