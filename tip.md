@@ -368,3 +368,16 @@
    ```sh
    sudo systemctl restart nscd.service
    ```
+1. 解决WPS流氓占用pdf文件图标的问题：
+   ```sh
+   sudo vim /usr/share/mime/packages/wps-office-pdf.xml
+   ```
+   把其中的3个相应位置修改为如下：
+   ```xml
+   <mime-type type="application/pdf">         #(1)
+      <comment>Microsoft Word</comment>
+      <sub-class-of type="application/pdf"/>  #(2)
+      <generic-icon name="org.gnome.Evince"/> #(3)
+      <glob pattern="*.pdf" weight="80"/>
+   </mime-type>
+   ```

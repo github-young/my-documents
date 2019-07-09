@@ -97,7 +97,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - gnome-tweak-tools
    - htop
    - notepadqq
-   - WPS (`` sudo chmod -x /usr/lib/office6/wpsoffice `` to stop wps after closing it)
+   - WPS (`` sudo chmod -x /usr/lib/office6/wpsoffice `` to stop wps after closing it && fix pdf icon issue, see `` tip.md ``)
    - Sogou/RIME Input Method (with config)
    - tldr (-> alias to how)
    - tlp (with: cpufrequtils)
