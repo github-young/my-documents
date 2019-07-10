@@ -372,7 +372,7 @@
    ```sh
    sudo vim /usr/share/mime/packages/wps-office-pdf.xml
    ```
-   把其中的3个相应位置修改为如下：
+   ~~把其中的3个相应位置修改为如下：~~
    ```xml
    <mime-type type="application/pdf">         #(1)
       <comment>Microsoft Word</comment>
@@ -381,6 +381,7 @@
       <glob pattern="*.pdf" weight="80"/>
    </mime-type>
    ```
+   直接删除或重命名上述wps文件，
    然后刷新MIME缓存：
    ```sh
    sudo update-mime-database /usr/share/mime
