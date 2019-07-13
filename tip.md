@@ -386,3 +386,11 @@
    ```sh
    sudo update-mime-database /usr/share/mime
    ```
+
+1. Manjaro清理垃圾：
+   ```sh
+   sudo pacman -Rsn $(pacman -Qdtq)
+   sudo pacman -Scc
+   sudo rm /var/lib/systemd/coredump/.
+   sudo journalctl --vacuum-size=50M
+   ```
