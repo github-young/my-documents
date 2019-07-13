@@ -271,6 +271,11 @@
        "registry-mirrors": ["https://registry.docker-cn.com"]
    }
    ```
+   然后重启相关服务：
+   ```sh
+   sudo systemctl daemon-reload
+   sudo systemctl restart docker
+   ```
 
 1. 安装hexo报错：
    ```sh
