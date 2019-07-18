@@ -399,3 +399,8 @@
    sudo rm /var/lib/systemd/coredump/.
    sudo journalctl --vacuum-size=50M
    ```
+
+1. Linux下查看Windows的txt乱码：
+   ```sh
+   iconv -f gbk -tutf8 in.txt > out.txt
+   ```
