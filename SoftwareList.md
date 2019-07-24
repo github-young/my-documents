@@ -13,11 +13,13 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - Editor: 
          - VSCode：Chinese Language Pack, LaTeX Workshop, MPE, Python, Vim, Sycing, Java, Flutter, Go
          - Sublime：PC, (Chinese)Localization, Conda, Python, Emmet, ConvertToUTF8, LaTeXTools, LaTeX-cwl, Terminal
+         - typora
       - Git (git-lfs)
       - Python: Anaconda/Miniconda (with Spyder3, with tuna source)
       - Java and Others: JDK, Android Studio, flutter, adb
       - hugo
       - go
+      - pandoc
    - Ladder: 
       - ssr/electron-ssr
       - lantern
@@ -109,6 +111,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - NetEase Cloud Music/musicbox
       - vlc/smplayer/mpv
    - oh-my-zsh (with config)
+   - lynx
 
 [+] Study/Dev: 
    - gnuplot
