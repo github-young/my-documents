@@ -1,4 +1,4 @@
 {
-    "PATH": "/usr/local/go/bin",
-    "GOPATH": "/usr/local/go"
+    "PATH": "/usr/lib/go/bin",
+    "GOPATH": "/usr/lib/go"
 }
