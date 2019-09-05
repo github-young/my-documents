@@ -97,8 +97,8 @@
   "editor.tabSize": 4,
   "editor.renderControlCharacters": false,
   "breadcrumbs.enabled": false,
-"editor.detectIndentation": false,
-"python.jediEnabled": false,
+  "editor.detectIndentation": false,
+  "python.jediEnabled": false,
   //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   //Java
   //"java.errors.incompleteClasspath.severity": "ignore",
