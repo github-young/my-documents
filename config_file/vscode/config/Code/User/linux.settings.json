@@ -1,0 +1,136 @@
+{
+    // ====== Java ======
+    "java.errors.incompleteClasspath.severity": "ignore",
+    // ====== LaTeX-Workshop ======
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    //"latex-workshop.view.pdf.viewer": "external",
+    /*"latex-workshop.view.pdf.external.command": {
+        "command": "sumatra",
+        "args": [
+            "%PDF%"
+        ]
+    },*/
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "%DOCFILE%"
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.gz",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.nav"
+    ],
+    // ====== Markdown Preview Enhanced ======
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.scrollSync": false,
+    // ====== Python ======
+    //"python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
+    "python.linting.enabled": true,
+    "python.jediEnabled": false,
+    // ====== Vim ======
+    "vim.overrideCopy": false,
+    "vim.useCtrlKeys": false,
+    // ====== VSCode ======
+    "breadcrumbs.enabled": false,
+    "editor.minimap.enabled": true,
+    "editor.fontSize": 18,
+    "editor.suggestSelection": "first",
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.renderControlCharacters": false,
+    "editor.wordWrap": "on",
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    //"http.proxy": "http://127.0.0.1:12333",
+    //"export https_proxy": "http://127.0.0.1:12333",
+    "markdown.preview.fontSize": 18,
+    "search.smartCase": true,
+    //"terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "window.zoomLevel": 0,
+    "window.titleBarStyle": "custom",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+}
