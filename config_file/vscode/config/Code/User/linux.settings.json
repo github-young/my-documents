@@ -53,7 +53,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-shell-escape",
-                "-pdf",
+                // "-pdf",
                 "%DOCFILE%"
             ]
         },
