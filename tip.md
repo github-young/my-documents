@@ -404,3 +404,15 @@
    ```sh
    iconv -f gbk -tutf8 in.txt > out.txt
    ```
+
+1. Linux下卸载/安装显卡驱动：
+   ```sh
+   sudo mhwd -r pci video-linux # (or) video-vesa
+   sudo mhwd -i pci video-linux
+   ```
+
+1. Manjaro下更新Anaconda报错`` file exits in xxx ``：
+   ```sh
+   sudo rm -rf /opt/anaconda
+   sudo pacman -S anaconda # (optinal) --overwrite /opt/anaconda
+   ```
