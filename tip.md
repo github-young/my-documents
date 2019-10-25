@@ -416,3 +416,8 @@
    sudo rm -rf /opt/anaconda
    sudo pacman -S anaconda # (optinal) --overwrite /opt/anaconda
    ```
+
+1. Disable Beep in Linux TTY:
+   ```sh
+   sudo rmmod pcspkr
+   ```
