@@ -421,3 +421,8 @@
    ```sh
    sudo rmmod pcspkr
    ```
+
+1. SSHFS:
+   ```sh
+   sudo sshfs -o allow_other,default_permission -p portNumber username@hostname:/remote/path/ /mnt/local/mount/point/
+   ```
