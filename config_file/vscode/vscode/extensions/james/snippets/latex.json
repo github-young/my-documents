@@ -179,7 +179,7 @@
     },
 	"align": {
 		"prefix": "BAL",
-		"body": "\\begin{align}\n\t\\label{${1:<label>}}\n\t$0\n\\end{align}",
+		"body": "\\begin{align}\n$1\n\\end{align}",
 		"description": "Insert an align environment"
 	},
 	"align*": {
