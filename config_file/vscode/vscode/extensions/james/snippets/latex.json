@@ -317,6 +317,11 @@
 		"body": "\\mathtt{${1:${TM_SELECTED_TEXT:text}}}",
 		"description": "Use an typewriter font"
 	},
+    "matrix": {
+         "prefix": "MAT",
+         "body": "\n\\begin{matrix}\n\\begin{pmatrix}\n$1\n\\end{pmatrix}\n\\end{matrix}",
+         "description": "Insert a matrix/vector environment"
+    },
 	"alpha": {
 		"prefix": "@a",
 		"body": "\\alpha",
