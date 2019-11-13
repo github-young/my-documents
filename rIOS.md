@@ -36,7 +36,7 @@
 1. 更新系统
 1. 安装软件：见`` SoftwareList.md ``
 1. 复制配置文件：见`` config_file ``
-1. 复制Windows字体并安装
+1. 复制Windows字体并安装，和powerline字体。
 
 ---
 
