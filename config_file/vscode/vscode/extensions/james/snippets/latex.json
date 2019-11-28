@@ -174,7 +174,7 @@
     },
     "braket": {
         "prefix": "bk",
-        "body": "\\braket{$1}$0"
+        "body": "\\braket{$1|$2|$3}$0"
         "description": "Insert a braket environment"
     },
 	"align": {
