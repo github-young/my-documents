@@ -8,8 +8,9 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - Browser: Firefox, Chrome (with accounts)
       - TeamViewer
       - VMware
+      - Vmware Horizon Client (UWP available)
    - Study/Dev: 
-      - TeXLive, MMA, Mendeley, Inkscape(TexText)
+      - TeXLive, MMA, Mendeley, Inkscape(TexText), MATLAB
       - Editor: 
          - VSCode：Chinese Language Pack, LaTeX Workshop, MPE, Python, Vim, Sycing, Java, Flutter, Go
          - Sublime：PC, (Chinese)Localization, Conda, Python, Emmet, ConvertToUTF8, LaTeXTools, LaTeX-cwl, Terminal
@@ -47,7 +48,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 [+] Common: 
    - Fast Stone Image Viewer
    - MPC-BE
-   - Adobe: Acrobat, PS
+   - Adobe: Acrobat, PS, AI
    - IObit Uninstaller
    - MS Office
    - WSL
@@ -100,7 +101,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - htop
    - notepadqq
    - WPS (`` sudo chmod -x /usr/lib/office6/wpsoffice `` to stop wps after closing it && fix pdf icon issue, see `` tip.md ``)
-   - Sogou/RIME Input Method (with config)
+   - RIME Input Method (with config)
    - tldr (-> alias to how)
    - tlp (with: cpufrequtils)
    - earlyoom
@@ -112,6 +113,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - vlc/smplayer/mpv
    - oh-my-zsh (with config)
    - lynx
+   - browsh
 
 [+] Study/Dev: 
    - gnuplot
