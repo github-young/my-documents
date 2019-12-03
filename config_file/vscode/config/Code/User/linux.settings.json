@@ -96,6 +96,10 @@
         "*.snm",
         "*.nav"
     ],
+    // ====== MATLAB =========================
+    "matlab.mlintpath": "/usr/local/MATLAB/R2018a/bin/mlint",
+    "matlab.lintOnSave": false,
+    "matlab.linterEncoding": "utf8",
     // ====== Markdown Preview Enhanced ======
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.scrollSync": false,
