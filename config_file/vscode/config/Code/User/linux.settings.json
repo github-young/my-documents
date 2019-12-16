@@ -119,6 +119,7 @@
     "editor.tabSize": 4,
     "editor.detectIndentation": false,
     "editor.renderControlCharacters": false,
+    "editor.rulers": [80],
     "editor.wordWrap": "on",
     "files.autoSave": "onFocusChange",
     "files.exclude": {
