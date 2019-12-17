@@ -33,9 +33,44 @@
                 "xelatex",
                 "xelatex"
             ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
         }
     ],
     "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                // "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
         {
             "name": "latexmk",
             "command": "latexmk",
@@ -47,26 +82,8 @@
                 // "-pdf",
                 "%DOCFILE%"
             ]
-        },
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-shell-escape",
-                "-pdf",
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
         }
+        
     ],
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
@@ -92,11 +109,16 @@
         "*.snm",
         "*.nav"
     ],
+    // ====== MATLAB =========================
+    // "matlab.mlintpath": "/usr/local/MATLAB/R2018b/bin/mlint",
+    "matlab.lintOnSave": false,
+    "matlab.linterEncoding": "utf8",
     // ====== Markdown Preview Enhanced ======
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.scrollSync": false,
     // ====== Python ======
     "python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
+    "python.dataScience.jupyterServerURI": "https://phz612.phys.ust.hk:8889",
     "python.linting.enabled": true,
     "python.jediEnabled": false,
     // ====== syncing ======

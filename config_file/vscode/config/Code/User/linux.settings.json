@@ -97,14 +97,15 @@
         "*.nav"
     ],
     // ====== MATLAB =========================
-    "matlab.mlintpath": "/usr/local/MATLAB/R2018a/bin/mlint",
+    "matlab.mlintpath": "/usr/local/MATLAB/R2018b/bin/mlint",
     "matlab.lintOnSave": false,
     "matlab.linterEncoding": "utf8",
     // ====== Markdown Preview Enhanced ======
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.scrollSync": false,
     // ====== Python ======
-    //"python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
+    "python.pythonPath": "/opt/anaconda/bin/python",
+    "python.dataScience.jupyterServerURI": "https://phz612.phys.ust.hk:8889",
     "python.linting.enabled": true,
     "python.jediEnabled": false,
     // ====== Vim ======
@@ -132,7 +133,6 @@
     //"export https_proxy": "http://127.0.0.1:12333",
     "markdown.preview.fontSize": 18,
     "search.smartCase": true,
-    //"terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     "window.zoomLevel": 0,
     "window.titleBarStyle": "custom",
     "workbench.activityBar.visible": false,
