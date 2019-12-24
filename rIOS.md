@@ -15,6 +15,7 @@
 检查引导模式+磁盘分区格式(UEFI+GPT)
 
 ### After
+1. Config Firewall ports: WSL-ssh, jupyter, ftp, http
 
 ---
 
@@ -40,7 +41,7 @@
 
 ---
 
-## Linux: Manjaro
+## Linux: Manjaro(Deepin)
 
 ### Before
 
@@ -48,24 +49,24 @@
 
 ### During
 
- - 分区时注意分一个`` /boot/efi ``分区，并勾选`` boot ``和`` esp ``标签
+ - 分区时注意分一个`` /boot/efi ``分区，文件系统为`` FAT32 ``，并勾选`` boot ``和`` esp ``标签
  - 地区选上海，语言选en_US
 
 ### After
 
-1. 配置控制中心，然后注销
+1. 配置控制中心(见`` ControlCenter.json ``)，然后注销
 
 1. 更新
    ```shell
    sudo pacman-mirrors -i -m rank -c China
    sudo pacman -Syy
    sudo pacman -S archlinux-keyring (not sure)
-   # change SigLevel if necessary!!
+   # change SigLevel to "Never" if necessary!!
    sudo pacman -Su
    ```
    然后重启
 
-1. 添加archlinuxcn和AUR:，见tuna
+1. 添加archlinuxcn和AUR:见tuna
    ```shell
    sudo pacman -S archlinuxcn-keyring
    sudo pacman -Sy
@@ -75,7 +76,8 @@
    然后重启
 
 1. 安装和配置on-my-zsh
-   1. 按照官网安装
+   1. 安装zsh
+   1. 按照官网安装(oh-my-zsh)
    ```shell
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
@@ -97,7 +99,7 @@
    ```shell
    sudo pacman -S fcitx-im
    sudo pacman -S fcitx-configtool
-   sudo pacman -S fcitx-sogoupinyin (or rime)
+   sudo pacman -S fcitx-rime
    ```
    然后`` vim ~/.xprofile ``，写入：
    ```shell
