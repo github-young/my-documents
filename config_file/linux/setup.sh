@@ -1,19 +1,15 @@
 #!/bin/bash
 # Automatically copy profiles into corresponding path.
 
-# shells
-cp -y .zshrc ~/
-cp -y .zsh_aliases ~/
-cp -y .bashrc ~/
-cp -y .bash_aliases ~/
+# Setup zsh
+./setupOMZ.sh
 
 # other files in ~
 cp -y .xprofile ~/
-cp -y .inputrc ~/
 cp -y rmtexfiles.sh ~/
 
 # vim
-sudo cp etc/vim/vimrc /etc/vimrc
+cp etc/vim/vimrc ~/.vim/vimrc
 
 # vscode
 cp -y ../vscode/config/Code/User/settings.json ~/.config/Code/User/
