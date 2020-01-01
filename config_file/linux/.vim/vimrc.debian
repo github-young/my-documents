@@ -70,7 +70,7 @@ set incsearch
 set ignorecase
 set hlsearch
 set showmatch
-set syntax=on
+syntax on
 set backspace=indent,eol,start
 set mouse=a
 
