@@ -6,6 +6,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 ### Misc/Cross Platform: 
    - Common:
       - Browser: Firefox, Chrome (with accounts)
+         - add-ons/extensions: config
       - TeamViewer
       - VMware
       - Vmware Horizon Client (UWP available)
@@ -16,17 +17,18 @@ A backup list of softwares currently/frequently in use for re-installation of OS
          - Sublime：PC, (Chinese)Localization, Conda, Python, Emmet, ConvertToUTF8, LaTeXTools, LaTeX-cwl, Terminal
          - typora
       - Git (~~git-lfs~~)(Do NOT use git-lfs!!!)
-      - Python: Anaconda/Miniconda (with Spyder3, with tuna source)
+      - Python: Anaconda/Miniconda (with Spyder3, with tuna source, with `` conda update spyder ``)
       - Java and Others: JDK, Android Studio, flutter, adb
       - hugo
       - go
       - pandoc
    - Ladder: 
+      - v2ray: v2ray(core/server); v2rayNG(Android), qv2ray(Linux/Win/Mac), v2rayN(Win)
       - ssr/electron-ssr
       - lantern
       - XX-net
       - firefly
-      - SwitchyOmega
+      - SwitchyOmega(OmegaOptions.bak)
 
 ### Windows
 [+] update drivers
@@ -44,6 +46,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - Weiyun
    - Kodi
    - Skype
+   - WSL: ports/firewall settings
 
 [+] Common: 
    - Fast Stone Image Viewer
@@ -51,7 +54,6 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - Adobe: Acrobat, PS, AI
    - IObit Uninstaller
    - MS Office
-   - WSL
    - DownloadTool: 
       - FDM
       - Tools for Baidu NetDisk
