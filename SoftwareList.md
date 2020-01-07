@@ -122,7 +122,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - gnuplot
    - g++
    - Spyder3
-   - dict, dictd (langdao-ec, see `` tip.md ``)
+   - dict, dictd (langdao-ec, see `` tip.md ``), goldendict, CBDict
    - docker 
 
 #### Server
