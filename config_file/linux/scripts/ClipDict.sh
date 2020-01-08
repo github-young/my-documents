@@ -54,7 +54,9 @@ shift $((OPTIND - 1))
 
 main() {
   oldWord=""
-  echo -e "ClipDict is on. Copy or select a word and get translated.\n"
+  echo -e "ClipDict is on. Copy or select a word and get it translated.\n"
+  echo $oldWord | xclip
+  echo $oldWord | xclip -sel clip
   while true; do
     sleep 1
     if [[ -n $MODE ]] && [[ $MODE == "copy" ]]; then
