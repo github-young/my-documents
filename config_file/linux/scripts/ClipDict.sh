@@ -76,12 +76,12 @@ main() {
 }
 
 if [[ -z $(command -v xclip) ]]; then
-  echo "[-] Install xclip first\n"
+  echo "[-] Install xclip first"
   exit 1
 fi
 
 if [[ -z $(command -v dict) ]]; then
-  echo "[-] Install dict first\n"
+  echo "[-] Install dict first"
   exit 1
 fi
 
