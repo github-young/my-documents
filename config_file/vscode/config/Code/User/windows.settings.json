@@ -125,7 +125,7 @@
     //gist = 9a5d7c4bd7242257bab8a3e6554989f1
     // ====== Vim ======
     "vim.overrideCopy": false,
-    "vim.yseCtrlKey": false,
+    "vim.useCtrlKeys": false,
     // ====== VSCode ======
     "breadcrumbs.enabled": false,
     "editor.minimap.enabled": true,
