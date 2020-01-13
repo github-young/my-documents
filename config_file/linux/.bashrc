@@ -88,17 +88,6 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias i='/home/young/in.sh'
-alias o='/home/young/out.sh'
-alias ll='ls -alhF'
-#alias la='ls -A'
-alias l='ls -CF'
-alias e='exit'
-alias clc='clear'
-alias fy='dict -d langdao-ec'
-alias fyy='dict -d langdao-ce'
-#alias free='free -h'
-alias how='tldr'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -119,42 +108,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# Set LS_COLORS environment by Deepin
-if [[ ("$TERM" = *256color || "$TERM" = screen* || "$TERM" = xterm* ) && -f /etc/lscolor-256color ]]; then
-    eval $(dircolors -b /etc/lscolor-256color)
-else
-    eval $(dircolors)
-fi
-# added by Miniconda3 4.5.12 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/young/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/home/young/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/young/miniconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/home/young/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
-
-conda deactivate
-
-## DO NOT let conda init after installation!
-#eval "$(/home/young/miniconda3/bin/conda shell.zsh hook)"
-
-# TeXLive 2018
-export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
-
-# flutter
-export PATH="/home/young/Documents/flutter/bin:$PATH"
-export ANDROID_HOME="/home/young/Android/Sdk"
-export PATH="${ANDROID_HOME}/tools:$PATH"
-export PATH="${ANDROID_HOME}/platform-tools:$PATH"
 
 # add any current working directory to PATH
 export PATH="$PATH:."

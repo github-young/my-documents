@@ -102,7 +102,6 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 export GOROOT=/usr/lib/go
-export Miniconda=/home/young/miniconda3/bin/
 export PATH="$PATH:/home/young/.local/bin/:$GOROOT/bin:."
 
 bindkey -v

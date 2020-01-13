@@ -1,7 +1,5 @@
 # some more ls aliases
-alias i='/home/young/in.sh'
-alias o='/home/young/out.sh'
-alias ll='ls -alhF'
+alias ll='ls -AlhF --sort=extension'
 alias l='ls -CF'
 alias cp='cp -i'
 alias e='exit'
