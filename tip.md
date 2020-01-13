@@ -426,3 +426,6 @@
    ```sh
    sudo sshfs -o allow_other,default_permission -p portNumber username@hostname:/remote/path/ /mnt/local/mount/point/
    ```
+
+1. firefox zoom:
+   about:config>>zoom>>max/min(160/120)

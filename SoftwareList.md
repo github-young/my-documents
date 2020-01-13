@@ -93,6 +93,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 [-] Thunderbird, Amazon, libreoffice
 
 [+] Common: 
+   - deepin-wine-related: deepin-wine, wine, qq, wechat(aur), (fonts: wqy-\*)
    - aria2
    - Audacity
    - curl
