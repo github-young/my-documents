@@ -429,3 +429,8 @@
 
 1. firefox zoom:
    about:config>>zoom>>max/min(160/120)
+
+1. linux mount NTFS disk:
+   ```sh
+   sudo mount -t ntfs -o rw,auto,user,fmask=0133,dmask=0022 /dev/sdxn /path2mnt
+   ```
