@@ -1,5 +1,7 @@
 #!/bin/bash
 
+WDIR=$(pwd)
+
 usage="NAME
     APOD Downloader -- A bash script to download APOD.
 
@@ -24,7 +26,7 @@ REQUIREMENTS
 version=0.1
 
 _base="https://apod.nasa.gov/apod/"
-_year="20"
+#_year="20"
 
 while getopts vhy:m:d: option; do
   case "$option" in
@@ -66,13 +68,14 @@ downloader() {
   imgName=$(curl -s $_url | grep -i "img src" | sed -e 's/^.*=//g' | sed -e 's/\"//g' | awk -F\/ '{ print $3 }')
 
   downloadLink="${_base}image/${_year}${_month}/${imgName}"
-  saveName="${_year}${_month}${_date}_${imgName}"
+  saveName="${WDIR}/${_year}${_month}${_date}_${imgName}"
 
-  if [[ ${#saveName} -gt 8 ]]; then
+  echo "${saveName}"
+  if [[ ${#saveName} -gt ${#WDIR}+8 ]]; then
     # echo ${_url}
     # echo ${imgName}
     # echo ${downloadLink}
-    #echo "${saveName}"
+    echo "${saveName}"
     wget -q ${downloadLink} -O "${saveName}" 2>&1
   fi
 }
@@ -92,6 +95,10 @@ main() {
   echo "Year: ${_year}"
   echo "Month: ${_month}"
   echo "Date: ${_date}"
+  if [[ -z "${_year}" ]]; then
+    echo "[-] FATAL: Year not specified."
+    exit 1
+  fi
   if [[ -z "${_month}" && -z "${_date}" ]]; then
     # jugdeProceed
     for _month in {01..12}; do
