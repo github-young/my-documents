@@ -434,3 +434,14 @@
    ```sh
    sudo mount -t ntfs -o rw,auto,user,fmask=0133,dmask=0022 /dev/sdxn /path2mnt
    ```
+
+1. DDE锁屏模糊问题：
+   ```sh
+   sudo rm /var/cache/image-blur/*.jpg
+   ```
+   然后设置一次锁屏，该目录下会出现一个模糊化的图片：`` xxx.jpg ``。
+   ```sh
+   sudo cp originalPicture /var/cache/image-blur/xxx.jpg
+   #(optinal) sudo chattr +i xxx.jpg
+   ```
+   注销，重新登录即可。
