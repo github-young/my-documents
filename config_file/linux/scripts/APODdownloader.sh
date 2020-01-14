@@ -14,6 +14,7 @@ OPTIONS
     -m  month:\t 2-digits int
     -d  date:\t 2-digits int
     -v  show the version
+    -t  test run; print message but download nothing
 
 EXAMPLE
     ./downloader.sh -y 19 -m 12 -d 31\t # a single day
@@ -26,9 +27,9 @@ REQUIREMENTS
 version=0.1
 
 _base="https://apod.nasa.gov/apod/"
-#_year="20"
+_testRun=false
 
-while getopts vhy:m:d: option; do
+while getopts vhy:m:d:t option; do
   case "$option" in
   v)
     echo "$version"
@@ -46,6 +47,9 @@ while getopts vhy:m:d: option; do
     ;;
   d)
     _date=$OPTARG
+    ;;
+  t)
+    _testRun=true
     ;;
   :)
     printf "missing argument for -%s\n" "$OPTARG" >&2
@@ -75,8 +79,10 @@ downloader() {
     # echo ${_url}
     # echo ${imgName}
     # echo ${downloadLink}
-    echo "${saveName}"
+    echo "Downloading: ${saveName}"
+    if [[ ${_testRun} == false ]]; then
     wget -q ${downloadLink} -O "${saveName}" 2>&1
+    fi
   fi
 }
 
