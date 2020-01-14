@@ -66,22 +66,19 @@ done
 shift $((OPTIND - 1))
 
 downloader() {
-
   _url="${_base}ap${_year}${_month}${_date}.html"
-
-  imgName=$(curl -s $_url | grep -i "img src" | sed -e 's/^.*=//g' | sed -e 's/\"//g' | awk -F\/ '{ print $3 }')
-
-  downloadLink="${_base}image/${_year}${_month}/${imgName}"
+  imgLink=$(curl -s $_url | grep -i "img src" | sed -e 's/^.*=//g' | sed -e 's/\"//g')
+  imgName=$(echo ${imgLink} | awk -F\/ '{ print $3 }')
+  downloadLink="${_base}${imgLink}"
   saveName="${WDIR}/${_year}${_month}${_date}_${imgName}"
-
   echo "${saveName}"
   if [[ ${#saveName} -gt ${#WDIR}+8 ]]; then
     # echo ${_url}
     # echo ${imgName}
     # echo ${downloadLink}
-    echo "Downloading: ${saveName}"
+    echo "Downloading to: ${saveName}"
     if [[ ${_testRun} == false ]]; then
-    wget -q ${downloadLink} -O "${saveName}" 2>&1
+      wget -q ${downloadLink} -O "${saveName}" 2>&1
     fi
   fi
 }
@@ -120,6 +117,7 @@ main() {
   elif [[ -n "${_month}" && -n "${_date}" ]]; then
     downloader -y ${_year} -m ${_month} -d ${_date}
   fi
+  echo "[+] Done."
 }
 
 main
