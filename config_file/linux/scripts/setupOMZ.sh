@@ -1,6 +1,12 @@
 #!/bin/bash
 
-echo "[!] Install and chsh zsh first!"
+_proceedFlag="N"
+echo "[!] Install and chsh zsh first! Proceed?[y/N]:"
+read _proceedFlag
+if [[ ${_proceedFlag} == "N" ]]; then
+  echo "[-] Abort."
+  exit 1
+fi
 
 # install oh-my-zsh and plugins
 
@@ -18,10 +24,11 @@ cp ../.oh-my-zsh/themes/myagnoster.zsh-theme ~/.oh-my-zsh/themes/
 # copy config files
 
 cp -i ../.zshrc ~/
-cp -i ../.zsh_aliases ~/
+ln -s ../.zsh_aliases ~/
 cp -i ../.bashrc ~/
-cp -i ../.bash_aliases ~/
+ln -s ../.bash_aliases ~/
 
 # copy other files
 
 cp -i ../.inputrc ~/
+ln  -s $(pwd) ~/.scripts

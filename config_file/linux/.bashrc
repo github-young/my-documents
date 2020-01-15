@@ -111,3 +111,11 @@ fi
 
 # add any current working directory to PATH
 export PATH="$PATH:."
+
+# Auto start tmux
+if [[ $DISPLAY ]]; then
+  [[ $- != *i* ]] && return
+  if [[ -z "$TMUX" ]]; then
+    exec tmux
+  fi
+fi

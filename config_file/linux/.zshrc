@@ -120,3 +120,10 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
   bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+# Auto start tmux
+if [[ $DISPLAY ]]; then
+  [[ $- != *i* ]] && return
+  if [[ -z "$TMUX" ]]; then
+    exec tmux
+  fi
+fi
