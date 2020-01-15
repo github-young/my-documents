@@ -8,8 +8,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - Browser: Firefox, Chrome (with accounts)
          - add-ons/extensions: config
       - TeamViewer
-      - VMware
-      - Vmware Horizon Client (UWP available)
+      - VMware WorkStation/Horizon Client (Win: UWP available)
    - Study/Dev: 
       - TeXLive, MMA, Mendeley, Inkscape(TexText), MATLAB
       - Editor: 
@@ -74,7 +73,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 
 [+] Other/Portable: 
    - Scoop/Chocolatey(require: Ladder): 
-      - 7zip, ffmpeg, aria2, wget, vim, gnuplot, sudo
+      - sudo, 7zip, ffmpeg, aria2, curl, wget, vim, gnuplot
    - GifCam
    - Licecap
    - utorrent
@@ -90,21 +89,23 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 [+] change source to tuna
 
 #### Personal
-[-] Thunderbird, Amazon, libreoffice
+[-] Thunderbird, Amazon, libreoffice, manjaro-hello
 
 [+] Common: 
+   - net-tools (for ifconfig)
    - deepin-wine-related: deepin-wine, wine, qq, wechat(aur), (fonts: wqy-\*)
    - aria2
    - Audacity
    - curl
    - cups(cups-pdf with chmod 4755(700) /usr/bin/cups/backend/cups-pdf and putput path in /etc/cups)
    - wget
+   - nmap
    - vim (with config)
    - gdebi
    - gnome-tweak-tools
    - htop
    - notepadqq
-   - WPS (`` sudo chmod -x /usr/lib/office6/wpsoffice `` to stop wps after closing it && fix pdf icon issue, see `` tip.md ``)
+   - wps-office (-mui-zh-cn, ttf-wps-fonts) (`` sudo chmod -x /usr/lib/office6/wpsoffice `` to stop wps after closing it && fix pdf icon issue, see [tip.md](tip.md))
    - RIME Input Method (with config)
    - tldr (-> alias to how)
    - tlp (with: cpufrequtils)
@@ -116,18 +117,23 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - NetEase Cloud Music/musicbox
       - vlc/smplayer/mpv
    - oh-my-zsh (with config)
+   - w3m
    - lynx
    - browsh
+   - fbreader (a mobi reader)
+   - OpenShot
+   - imagemagick
 
 [+] Study/Dev: 
    - gnuplot
    - g++
    - Spyder3
-   - dict, dictd (langdao-ec, see `` tip.md ``), goldendict, CBDict
+   - dict, dictd (langdao-ec, see [tip.md](tip.md)), goldendict, ~~CBDict~~, ClipDict
    - docker 
 
 #### Server
 [+] Extra: 
+   - fbida
    - openssh-server
    - vsftpd
    - Apache2/httpd
