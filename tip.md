@@ -445,3 +445,8 @@
    #(optinal) sudo chattr +i xxx.jpg
    ```
    注销，重新登录即可。
+
+1. tty界面下旋转屏幕
+   ```sh
+   echo 3 > /sys/class/graphics/fbcon/rotate_all
+   ```

@@ -123,7 +123,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - fbreader (a mobi reader)
    - OpenShot
    - imagemagick
-   - tmux(with plugins)
+   - tmux(with plugin:tpm and config)
 
 [+] Study/Dev: 
    - gnuplot
