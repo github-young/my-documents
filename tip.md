@@ -450,3 +450,13 @@
    ```sh
    echo 3 > /sys/class/graphics/fbcon/rotate_all
    ```
+
+1. ssh免密码登录+git共存：
+   1. git原样配置不变
+   1. ssh：
+      ```sh
+      ssh-keygen -t dsa # and save as default
+      ssh-copy-id -i id_dsa.pub username@server
+      ssh-add id_rsa id_dsa
+      ```
+
