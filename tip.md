@@ -433,6 +433,7 @@
 1. linux mount NTFS disk:
    ```sh
    sudo mount -t ntfs -o rw,auto,user,fmask=0133,dmask=0022 /dev/sdxn /path2mnt
+   mount --bind oldPath newPath
    ```
 
 1. DDE锁屏模糊问题：
