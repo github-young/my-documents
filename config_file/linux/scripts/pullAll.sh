@@ -9,6 +9,10 @@ cd $baseDir/njudii/blog/
 git pull
 echo "  njudii/blog/"
 
+cd $baseDir/njudii/gitee/blog/
+git pull
+echo "  njudii/gitee/blog/"
+
 cd $baseDir/me/BachelorThesis/
 git pull
 echo "  me/BachelorThesis/"
