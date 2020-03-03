@@ -9,7 +9,11 @@
 		"body": "\\usepackage{${1:<package>}}",
 		"description": "Insert a usepackage command"
 	},
-
+	"beginDocument": {
+		"prefix": "BDC",
+		"body": "\\begin{document}\n$1\n\\end{document}",
+		"description": "Insert a begin document environment"
+	},
 	"item": {
 		"prefix": "item",
 		"body": "\n\\item ",
