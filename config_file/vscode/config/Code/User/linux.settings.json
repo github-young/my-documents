@@ -104,8 +104,8 @@
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.scrollSync": false,
     // ====== Python ======
+    "python.dataScience.sendSelectionToInteractiveWindow": false,
     "python.pythonPath": "/opt/anaconda/bin/python",
-    "python.dataScience.jupyterServerURI": "https://phz612.phys.ust.hk:8889",
     "python.linting.enabled": true,
     "python.jediEnabled": false,
     // ====== Vim ======
