@@ -1,5 +1,6 @@
 # some more ls aliases
-alias ll='ls -alhF --sort=extension'
+#alias ll='ls -alhF --sort=extension'
+alias ll='ls -alhF'
 alias l='ls -CF'
 alias cp='cp -i'
 alias e='exit'
