@@ -21,6 +21,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 set nu
 set cursorline
+set cursorcolumn
 set ruler
 set smartindent
 set autoindent
@@ -29,6 +30,9 @@ set expandtab
 set incsearch
 set ignorecase
 set hlsearch
+syntax enable
 syntax on
 set backspace=indent,eol,start
 set mouse=a
+
+colo molokai
