@@ -22,6 +22,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - go
       - pandoc
    - Ladder: 
+      - Easyconnect (backward)
       - v2ray: v2ray(core/server); v2rayNG(Android), qv2ray(Linux/Win/Mac), v2rayN(Win)
       - ssr/electron-ssr
       - lantern
@@ -100,7 +101,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - cups(cups-pdf with chmod 4755(700) /usr/bin/cups/backend/cups-pdf and putput path in /etc/cups)
    - wget
    - nmap
-   - vim (with config)
+   - vim (with vimrc & plugins)
    - gdebi
    - gnome-tweak-tools
    - htop
@@ -124,6 +125,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - OpenShot
    - imagemagick
    - tmux(with plugin:tpm and config)
+   Zathura
 
 [+] Study/Dev: 
    - gnuplot
