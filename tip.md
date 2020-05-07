@@ -220,8 +220,9 @@
       install Log::Dispatch::File
       install YAML::Tiny
       install File::HomeDir
+      install Unicode::GCString
       ```
-      这样这个bug就修好了。
+      这样这个bug就修好了。参考[这里](https://github.com/James-Yu/LaTeX-Workshop/issues/376)
 
 1. Sublime的插件：
    package control的官网被墙了。那么只能离线安装，离线安装文件放在 `` Installed Packages `` 里面。其它的插件(LaTeXTools、LaTeX-cwl)都可以按照github的说明离线安装，记得在User文件夹里新建一个叫cwl的文件夹，然后把clone到的LaTeX-cwl里的cwl文件放进去即可。
