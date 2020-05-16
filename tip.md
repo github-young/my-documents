@@ -178,7 +178,7 @@
    # -J is related with Windows. See the manual.
    mkisofs -J (-m SomeDirectory/Useless.txt) -o OutputFile.iso inputDir/
    # Or (from: https://blog.csdn.net/Happy_Sunshine_Boy/article/details/89511973)
-   mkisofs -l -J -R -L -r -v -hide-rr-moved -o output.iso inputDir/
+   mkisofs -l -J -R -allow-leading-dots -r -v -hide-rr-moved -o output.iso inputDir/
    ```
 
 1. WSL path:
