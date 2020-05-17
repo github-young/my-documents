@@ -78,6 +78,6 @@ set mouse=a
 
 colo molokai
 
-set inoremap JJ <Esc>
-set nnoremap j jzz
-set nnoremap k kzz
+inoremap JJ <Esc>
+nnoremap j jzz
+nnoremap k kzz

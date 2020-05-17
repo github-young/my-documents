@@ -34,6 +34,7 @@ set expandtab
 set incsearch
 set ignorecase
 set hlsearch
+set showmatch
 syntax enable
 syntax on
 set backspace=indent,eol,start
@@ -41,6 +42,6 @@ set mouse=a
 
 colo molokai
 
-set inoremap JJ <Esc>
-set nnoremap j jzz
-set nnoremap k kzz
+inoremap JJ <Esc>
+nnoremap j jzz
+nnoremap k kzz
