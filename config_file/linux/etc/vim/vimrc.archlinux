@@ -43,5 +43,3 @@ set mouse=a
 colo molokai
 
 inoremap JJ <Esc>
-nnoremap j jzz
-nnoremap k kzz

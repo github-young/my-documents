@@ -23,6 +23,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - pandoc
    - Ladder: 
       - Easyconnect (backward)
+      - Trojan: Trojan-Qt5
       - v2ray: v2ray(core/server); v2rayNG(Android), qv2ray(Linux/Win/Mac), v2rayN(Win)
       - ssr/electron-ssr
       - lantern
@@ -125,7 +126,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - OpenShot
    - imagemagick
    - tmux(with plugin:tpm and config)
-   Zathura
+   - Zathura
 
 [+] Study/Dev: 
    - gnuplot

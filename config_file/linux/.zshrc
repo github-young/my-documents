@@ -101,8 +101,8 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-export GOROOT=/usr/lib/go
-export PATH="$PATH:/home/young/.local/bin/:$GOROOT/bin:."
+#export GOROOT=/usr/lib/go
+export PATH="$PATH:~/.local/bin/:."
 
 bindkey -v
 
