@@ -72,6 +72,7 @@
    sudo pacman -Sy
    sudo pacman -Syy
    sudo pacman -Su
+   sudo pacman -S yay
    ```
    然后重启
 
@@ -107,3 +108,27 @@
    export QT_IM_MODULE=fcitx
    export XMODIFIERS="@im=fcitx"
    ```
+
+## Linux (Arch+KDE) 大部分相同，下面是增量内容
+
+### Before
+
+```sh
+dd bs=4M if=/archlinux.iso of=/dev/sdc
+```
+
+Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
+
+### During
+
+1. Before boot: Check BIOS setting: UEFI only.
+1. Before `` pacstrap ``: Check mirrorlist
+1. During `` pacstrap ``: `` pacstrap linux-lts vim dhcpcd``
+1. 时区选择: `` Asia/Shanghai ``
+1. After `` arch-chroot ``: `` systemctl enable dhcpcd.service ``
+
+### After
+
+1. 使用deepin-wine-qq/wechat: `` sudo pacman -S gnome-settings-daemon ``，然后设置 `` /usr/lib/gsd-xsettings `` 为开机启动
+1. 中文输入法: `` sudo pacman -S fcitx fcitx-rime kcm-fcitx ``
+1. (Optinal): 模仿Win10风格

@@ -131,6 +131,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 [+] Study/Dev: 
    - gnuplot
    - g++
+   - make/cmake
    - Spyder3
    - dict, dictd (langdao-ec, see [tip.md](tip.md)), goldendict, ~~CBDict~~, ClipDict
    - docker 
@@ -138,7 +139,9 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 #### Server
 [+] Extra: 
    - fbida
-   - openssh-server
+   - openssh(-server)
    - vsftpd
-   - Apache2/httpd
+   - samba/smb
+   - Nginx, ~~Apache2/httpd~~
    - mail(mail-utils)
+   - Ladder server end
