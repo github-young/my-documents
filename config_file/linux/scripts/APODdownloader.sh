@@ -14,7 +14,7 @@ usage="NAME
     APOD Downloader -- A bash script to download APOD.
 
 SYNOPSIS
-    ./downloader.sh [OPTIONs] [VALUEs]
+    ./APODdownloader.sh [OPTIONs] [VALUEs]
 
 OPTIONS
     -h  show this help text
@@ -25,9 +25,9 @@ OPTIONS
     -t  test run; print message but download nothing
 
 EXAMPLE
-    ./downloader.sh -y 19 -m 12 -d 31\t # a single day
-    ./downloader.sh -y 19 -m 12      \t # whole month
-    ./downloader.sh -y 19            \t # whole year
+    ./APODdownloader.sh -y 19 -m 12 -d 31\t # a single day
+    ./APODdownloader.sh -y 19 -m 12      \t # whole month
+    ./APODdownloader.sh -y 19            \t # whole year
 
 REQUIREMENTS
     awk, curl, sed, wget"
