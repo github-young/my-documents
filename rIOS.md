@@ -129,6 +129,6 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 
 ### After
 
-1. 使用deepin-wine-qq/wechat: `` sudo pacman -S gnome-settings-daemon ``，然后设置 `` /usr/lib/gsd-xsettings `` 为开机启动
+1. 使用deepin-wine-qq/tim/wechat: `` sudo pacman -S gnome-settings-daemon ``，然后设置 `` /usr/lib/gsd-xsettings `` 为开机启动
 1. 中文输入法: `` sudo pacman -S fcitx fcitx-rime kcm-fcitx ``
 1. (Optinal): 模仿Win10风格

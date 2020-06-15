@@ -467,3 +467,11 @@
       ssh-add id_rsa id_dsa
       ```
 
+1. KDE下deepin-wine-qq/tim/wechat的字体：
+   1. 确保安装了所需的字体：Windows, wqy, ...
+   1. `` sudo pacman -S deepin-wine-wechat deepin.com.qq.im/office gnome-settings-daemon ``
+   1. 设置 `` /usr/lib/gsd-xsettings ``为开机启动
+   1. 运行一次qq/tim/wechat，使wine自动配置
+   1. `` env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" winecfg ``，改dpi=120
+   1. 复制 `` zh.reg ``到各自的目录下，如 `` cp zh.reg ~/.deepinwine/Deepin-TIM/ ``
+   1. `` env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" wine regedit ``，然后import这个zh.reg
