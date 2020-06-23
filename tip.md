@@ -475,3 +475,10 @@
    1. `` env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" winecfg ``，改dpi=120
    1. 复制 `` zh.reg ``到各自的目录下，如 `` cp zh.reg ~/.deepinwine/Deepin-TIM/ ``
    1. `` env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" wine regedit ``，然后import这个zh.reg
+
+1. DOcker里的Archlinux报错：cannot sign locally：
+   ```sh
+   pacman-key --init
+   pacman-key --populate archlinux
+   pacman -Syy
+   ```
