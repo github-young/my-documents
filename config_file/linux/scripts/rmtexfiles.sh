@@ -22,3 +22,4 @@ rm -f *.toc
 rm -f *.out
 rm -f *.gz
 rm -f *.xdv
+echo "[+] Done."
