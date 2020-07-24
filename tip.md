@@ -440,6 +440,8 @@
    ```sh
    sudo mount -t ntfs -o rw,auto,user,fmask=0133,dmask=0022 /dev/sdxn /path2mnt
    mount --bind oldPath newPath
+   # for crontab
+   # @reboot mount -o uid=1000,gid=1000,dmask=022,fmask=133 /dev/sda1 /mnt/HDD && mount --bind /mnt/HDD/xy/data/downloads /home/yxucn/Downloads/ftp/mnt/xy/data/downloads
    ```
 
 1. DDE锁屏模糊问题：
