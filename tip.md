@@ -484,3 +484,18 @@
    pacman-key --populate archlinux
    pacman -Syy
    ```
+
+1. Arduino相关：
+   ```sh
+   # Check arduino-cli related commands first!
+   # Write your code first
+   # Change some settings:
+   # Change baudrate (exceute multiple times)
+   stty -F /dev/ttyUSB0 speed 9600 cs8 -cstopb -parenb
+   stty -F /dev/ttyUSB0 speed 9600 cs8 -cstopb -parenb
+   # For non-root user
+   # sudo usermod -a dialout $USER
+   # sudo chmod 666 /dev/ttyUSB0
+   arduino-cli core install arduino:avr
+   arduino-cli compile --fqbn arduino:avr:uno xxx/xxx
+   arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno xxx/xxx
