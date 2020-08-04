@@ -499,3 +499,6 @@
    arduino-cli core install arduino:avr
    arduino-cli compile --fqbn arduino:avr:uno xxx/xxx
    arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno xxx/xxx
+   # Listen on Serial
+   cat < /dev/ttyUSB0
+   minicom -D /dev/ttyUSB0 -b 9600
