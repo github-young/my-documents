@@ -478,7 +478,7 @@
    1. 复制 `` zh.reg ``到各自的目录下，如 `` cp zh.reg ~/.deepinwine/Deepin-TIM/ ``
    1. `` env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" wine regedit ``，然后import这个zh.reg
 
-1. DOcker里的Archlinux报错：cannot sign locally：
+1. Docker里的Archlinux报错：cannot sign locally：
    ```sh
    pacman-key --init
    pacman-key --populate archlinux
@@ -502,3 +502,10 @@
    # Listen on Serial
    cat < /dev/ttyUSB0
    minicom -D /dev/ttyUSB0 -b 9600
+
+1. Armbian apt search非常慢：
+   ```sh
+   vim /etc/apt/apt.conf.d/02-armbian-compress-index # change to gz
+   cd /var/lib/apt/lists
+   rm *.lz4
+   sudo apt update
