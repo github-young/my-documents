@@ -4,9 +4,9 @@
 nmcli device status
 
 if [[ "$1" == "on" ]]; then
-  sudo nmcli device wifi hotspot ifname wlp0s26u1u con-name 4137 ssid 4137 band bg channel 8 password xykindle
+  sudo nmcli device wifi hotspot ifname wlp0s26u1u1 con-name 4137 ssid 4137 band bg channel 8 password xykindle
 fi
 
 if [[ "$1" == "off" ]]; then
-  sudo nmcli device disconnect wlp0s26u1u
+  sudo nmcli device disconnect wlp0s26u1u1
 fi
