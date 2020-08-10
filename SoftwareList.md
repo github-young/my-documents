@@ -139,6 +139,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 #### Server
 [+] Extra: 
    - fbida
+   - im2a
    - openssh(-server)
    - vsftpd
    - samba/smb

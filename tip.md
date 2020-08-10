@@ -509,3 +509,8 @@
    cd /var/lib/apt/lists
    rm *.lz4
    sudo apt update
+
+1. List user installed packages in Arch:
+   ```sh
+   comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)
+   ```
