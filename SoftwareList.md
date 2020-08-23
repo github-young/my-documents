@@ -124,6 +124,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - browsh
    - fbreader (a mobi reader)
    - OpenShot
+   - Flameshot
    - imagemagick
    - tmux(with plugin:tpm and config)
    - Zathura
