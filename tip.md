@@ -502,6 +502,7 @@
    # Listen on Serial
    cat < /dev/ttyUSB0
    minicom -D /dev/ttyUSB0 -b 9600
+   ```
 
 1. Armbian apt search非常慢：
    ```sh
@@ -509,13 +510,14 @@
    cd /var/lib/apt/lists
    rm *.lz4
    sudo apt update
+   ```
 
 1. List user installed packages in Arch:
    ```sh
    comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)
    ```
 
-1. Self-signed SSL with openssl (See Arch Wiki Openssl):
-   ```sh
-   sudo openssl req -new -x509 -nodes -newkey rsa:4096 -keyout server.key -out server.crt -days 1095
-   ```
+1. acme.sh: mainly refer to trojan-tutor, but:
+   - Comment the `` listen 80 `` server block before using acme.sh.
+   - Then follow the steps in the trojan-tutor
+   - Then cp and mv the ``.crt `` and `` .key `` file to `` nginx `` and `` jupyter `` directory.
