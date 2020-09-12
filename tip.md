@@ -514,3 +514,8 @@
    ```sh
    comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)
    ```
+
+1. Self-signed SSL with openssl (See Arch Wiki Openssl):
+   ```sh
+   sudo openssl req -new -x509 -nodes -newkey rsa:4096 -keyout server.key -out server.crt -days 1095
+   ```
