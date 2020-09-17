@@ -1,0 +1,16 @@
+[Unit]
+Description=Jupyter notebook server
+
+[Service]
+Type=simple
+PIDFile=/run/jupyter.pid
+ExecStart=/usr/bin/jupyter-notebook --config=/home/jupyteruser/.jupyter/jupyter_notebook_config.py
+User=jupyteruser
+Group=jupyteruser
+WorkingDirectory=/home/jupyteruser/Documents/
+After=network.target
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
