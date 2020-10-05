@@ -76,6 +76,7 @@ syntax enable
 syntax on
 set backspace=indent,eol,start
 set mouse=a
+set relativenumber
 
 colo molokai
 "set background=dark
