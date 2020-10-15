@@ -4,6 +4,7 @@
     // ====== LaTeX-Workshop ======
     "latex-workshop.message.update.show": false,
     "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
     //"latex-workshop.view.pdf.viewer": "external",
     /*"latex-workshop.view.pdf.external.command": {
         "command": "sumatra",
@@ -115,11 +116,29 @@
     // ====== Markdown Preview Enhanced ======
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.scrollSync": false,
+    // ====== Live Server ======
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
     // ====== Python ======
     "python.dataScience.sendSelectionToInteractiveWindow": false,
     "python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
     "python.linting.enabled": true,
     "python.jediEnabled": false,
+    // ====== Remote SSH ======
+    "remote.SSH.remotePlatform": {
+        "ip.ip.ip.a": "linux",
+        "ip.ip.ip.b": "linux"
+    },
+    // ====== SpellRight ======
+    "spellright.configurationScope": "user",
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
     // ====== Vim ======
     "vim.overrideCopy": false,
     "vim.useCtrlKeys": false,
@@ -133,6 +152,8 @@
     "editor.detectIndentation": false,
     "editor.renderControlCharacters": false,
     "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "extensions.autoUpdate": true,
     "files.autoSave": "onFocusChange",
     "files.exclude": {
         "**/.classpath": true,
@@ -145,14 +166,25 @@
     "markdown.preview.fontSize": 18,
     "search.smartCase": true,
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
     "window.zoomLevel": 0,
     //"window.titleBarStyle": "custom",
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
     "workbench.enableExperiments": false,
     "update.showReleaseNotes": false,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "extensions.autoUpdate": false,
+    "update.enableWindowsBackgroundUpdates": true,
     //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "explorer.confirmDelete": false,
+    "python.languageServer": "Microsoft",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
