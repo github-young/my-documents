@@ -108,13 +108,28 @@
     "python.pythonPath": "/opt/anaconda/bin/python",
     "python.linting.enabled": true,
     "python.jediEnabled": false,
+    // ====== SpellRight ======
+    "spellright.language": [
+        "en_US"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
     // ====== Vim ======
     "vim.overrideCopy": false,
     "vim.useCtrlKeys": false,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["J", "J"],
+            "after": ["<Esc>"]
+        }
+    ],
     // ====== VSCode ======
     "breadcrumbs.enabled": false,
     "editor.minimap.enabled": true,
-    "editor.fontSize": 18,
+    "editor.fontSize": 22,
     "editor.suggestSelection": "first",
     "editor.renderWhitespace": "all",
     "editor.tabSize": 4,
@@ -137,5 +152,8 @@
     "window.titleBarStyle": "custom",
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
+    "explorer.confirmDelete": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
     //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
