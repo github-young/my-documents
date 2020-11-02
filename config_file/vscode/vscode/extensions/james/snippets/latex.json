@@ -126,7 +126,7 @@
 		"description": "Insert a Big |"
 	},
 	"setminus": {
-		"prefix": "@\\",
+		"prefix": "\\setminus",
 		"body": "\\setminus",
 		"description": "Insert a minus set"
 	},
