@@ -89,6 +89,7 @@
         "*.aux",
         "*.bbl",
         "*.blg",
+        "*.bcf",
         "*.idx",
         "*.ind",
         "*.lof",
@@ -107,7 +108,8 @@
         "*.log",
         "*.fdb_latexmk",
         "*.snm",
-        "*.nav"
+        "*.nav",
+        "*.run.xml"
     ],
     // ====== MATLAB =========================
     // "matlab.mlintpath": "C:\\D\\study\\MATLAB\\R2018b\\bin\\win64",
