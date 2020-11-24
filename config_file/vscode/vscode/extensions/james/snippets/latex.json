@@ -178,7 +178,7 @@
     },
     "braket": {
         "prefix": "bk",
-        "body": "\\braket{$1|$2|$3}$0"
+        "body": "\\braket{$1|$2|$3}$0",
         "description": "Insert a braket environment"
     },
 	"align": {
@@ -199,6 +199,16 @@
 	"enumerate": {
 		"prefix": "BEN",
 		"body": "\\begin{enumerate}\n\t\\item $0\n\\end{enumerate}",
+		"description": "Insert an enumerate environment"
+	},
+	"itemizeBeamer": {
+		"prefix": "BBIT",
+		"body": "\\begin{itemize}\\vspace{5pt}\n\t\\item $0\n\\end{itemize}",
+		"description": "Insert an itemize environment"
+	},
+	"enumerateBeamer": {
+		"prefix": "BBEN",
+		"body": "\\begin{enumerate}\\vspace{5pt}\n\t\\item $0\n\\end{enumerate}",
 		"description": "Insert an enumerate environment"
 	},
 	"split": {
