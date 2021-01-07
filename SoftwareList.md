@@ -10,7 +10,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
       - TeamViewer
       - VMware WorkStation/Horizon Client (Win: UWP available)
    - Study/Dev: 
-      - TeXLive, MMA, Mendeley, Inkscape(TexText), MATLAB
+      - TeXLive, MMA, Mendeley, Zetero(zotfile), Inkscape(TexText), MATLAB
       - Editor: 
          - VSCode：Chinese Language Pack, LaTeX Workshop, MPE, Python, Vim, ~~Sycing~~, Java, Flutter, Go, C/C++, SpellRight, MATLAB, Remote-SSH/WSL, shell-format
          - Sublime：PC, (Chinese)Localization, Conda, Python, Emmet, ConvertToUTF8, LaTeXTools, LaTeX-cwl, Terminal
@@ -139,6 +139,7 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 
 #### Server
 [+] Extra: 
+   - NetworkManager (nmcli/nmtui)
    - fbida
    - im2a
    - openssh(-server)
