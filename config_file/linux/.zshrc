@@ -102,7 +102,7 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 #export GOROOT=/usr/lib/go
-export PATH="$PATH:~/.local/bin/:."
+export PATH="$PATH:~/.local/bin:."
 
 bindkey -v
 
