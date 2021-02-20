@@ -133,34 +133,39 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 1. 中文输入法: `` sudo pacman -S fcitx fcitx-rime kcm-fcitx ``
 1. (Optinal): 模仿Win10风格
 
-## Arch Server Step by Step Installation & Configuration
+## Arch Server (Step by Step) Installation & Configuration Guide
 
 ### Pre-Installation
 
-1. Download latest Arch ISO from TUNA.
-1. Rename as "ARCH\_202102.iso" and move it to Ventoy U-disk.
+1. Download latest Arch ISO from [TUNA](https://mirrors.tuna.tsinghua.edu.cn/).
+1. Rename as "ARCH\_202102.iso" and move it to [Ventoy](https://github.com/ventoy/Ventoy) U-disk.
 1. Prepare enough and clean disk space.
-1. Open Arch Wiki and Archfi github page on another computer as references.
+1. Open [Arch Wiki](https://wiki.archlinux.org/index.php/installation_guide) and [archfi](https://github.com/MatMoul/archfi) on another computer as references.
 
 ### Installation
 
 #### Begin
 
 1. Connect to wired connection.
-1. Boot from Ventoy, choose ARCH ISO.
-1. If ethernet is not OK, try `` systemd `` in "network configuration" in Arch Wiki; if still not OK, use USB T-ethering to install `` networkmanager ``, and then `` nmtui `` to delete, add, and activate an ethernet connection.
+1. Boot from Ventoy, choose Arch ISO.
+1. If ethernet is not OK, try `` systemd-networkd `` in [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd-networkd); if still not OK, use USB T-ethering to install `` networkmanager ``, and then `` nmtui `` to delete, add and activate an ethernet connection.
 
 #### Middle
 
 Use `` archfi `` to help install, or follow Arch Wiki. A few points to care:
 
 1. (Partition) 500M/fat32 for `` EFI ``, 2\*RAM/swap for `` swap ``; ALL/ext4 for `` / ``.
-1. (pacstrap) `` pacstrap linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-probe ntfs-3g sudo zsh nodejs ``
-1. (locale) `` en_US.UTF-8 ``
+1. (Source) Change sources to TUNA.
 
 #### End
 
-1. (before umount in archfi) Login on tty2, and `` systemctl enable dhcpcd/NetworkManager ``, then switch to archfi and re-run grub configuration.
+Before umount in archfi, login on tty2:
+
+```shell
+pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-probe ntfs-3g sudo zsh nodejs
+systemctl enable dhcpcd/NetworkManager
+```
+then switch to archfi and re-run grub configuration. Then umount and reboot.
 
 ### Configuration
 
@@ -215,6 +220,13 @@ vim ~/.vim/vimrcand # :PlugInstall
 sudo cp etc/vim/molokai.vim /usr/share/vim/vim81/colors/
 ```
 
+#### Third reboot
+
+##### Softwares
+
+1. Check sources list and add archlinuxcn and AUR, see [TUNA Help](https://mirrors.tuna.tsinghua.edu.cn/help/archlinuxcn/).
+1. Install the softwares in SoftwareList.
+
 ##### my-config (private repo)
 
 Apply private configurations.
@@ -225,3 +237,4 @@ git clone git@github.com:github-young/my-config.git
 ```
 
 Then copy and modify corresponding config files in the repo.
+

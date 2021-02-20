@@ -96,11 +96,9 @@ A backup list of softwares currently/frequently in use for re-installation of OS
 [+] Common: 
    - net-tools (for ifconfig)
    - deepin-wine-related: deepin-wine, wine, qq, wechat(aur), (fonts: wqy-\*)
-   - aria2
+   - DownloadTool: curl, wget, aria2c, you-get, youtube-dl
    - Audacity
-   - curl
    - cups(cups-pdf with chmod 4755(700) /usr/bin/cups/backend/cups-pdf and putput path in /etc/cups)
-   - wget
    - nmap
    - vim (with vimrc & plugins)
    - gdebi
@@ -135,7 +133,9 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - make/cmake
    - Spyder3
    - dict, dictd (langdao-ec, see [tip.md](tip.md)), goldendict, ~~CBDict~~, ClipDict
-   - docker 
+   - docker
+   - arduino-cli
+   - [onedrive](https://github.com/abraunegg/onedrive)
 
 #### Server
 [+] Extra: 
@@ -148,3 +148,8 @@ A backup list of softwares currently/frequently in use for re-installation of OS
    - Nginx, ~~Apache2/httpd~~
    - mail(mail-utils)
    - Ladder server end
+   - [vcsi](https://github.com/amietn/vcsi)
+   - Others in my GitHub Stars.
+
+[+] Arch Linux server
+   - yay (archlinuxcn/AUR)
