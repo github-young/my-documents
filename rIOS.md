@@ -152,7 +152,7 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 
 #### Middle
 
-Use `` archfi `` to help install, or follow Arch Wiki. A few points to care:
+Use `` archfi `` to help install, or follow Arch Wiki. A few points to be noted:
 
 1. (Partition) 500M/fat32 for `` EFI ``, 2\*RAM/swap for `` swap ``; ALL/ext4 for `` / ``.
 1. (Source) Change sources to TUNA.
@@ -163,13 +163,14 @@ Before umount in archfi, login on tty2:
 
 ```shell
 pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-probe ntfs-3g sudo zsh nodejs
+arch-chroot
 systemctl enable dhcpcd/NetworkManager
 ```
 then switch to archfi and re-run grub configuration. Then umount and reboot.
 
 ### Configuration
 
-#### First reboot
+#### 1. First reboot
 
 1. Login as `` root ``.
 1. Edit `` /etc/ssh/sshd_config `` and change `` port ``, then `` systemctl enable sshd ``.
@@ -178,7 +179,7 @@ then switch to archfi and re-run grub configuration. Then umount and reboot.
 1. Add a normal user: `` useradd -m -G "wheel" -s /usr/bin/zsh <USERNAME> ``
 1. `` reboot ``.
 
-#### Second reboot
+#### 2. Second reboot
 
 1. Make sure the server can be accessed via ssh.
 1. Put the server at suitable place.
@@ -202,7 +203,7 @@ cat ~/.ssh/id_rsa.pub
 ssh git@github.com
 ```
 
-Repeat for each user: root/<USERNAME>/others:
+Repeat for each user: root/\<USERNAME\>/others:
 
 ```shell
 # Clone my configuration repo
@@ -220,7 +221,9 @@ vim ~/.vim/vimrcand # :PlugInstall
 sudo cp etc/vim/molokai.vim /usr/share/vim/vim81/colors/
 ```
 
-#### Third reboot
+`` reboot ``
+
+#### 3. Third reboot
 
 ##### Softwares
 
@@ -238,3 +241,4 @@ git clone git@github.com:github-young/my-config.git
 
 Then copy and modify corresponding config files in the repo.
 
+After that, `` reboot ``.
