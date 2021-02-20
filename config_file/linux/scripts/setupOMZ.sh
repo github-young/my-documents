@@ -32,5 +32,6 @@ cp -i ../.zsh_aliases ~/
 
 #cp -i ../.inputrc ~/
 ln  -s "${_WDIR}/scripts" "${HOME}/.scripts"
+ln  -s "${_WDIR}/scripts/pullAll.sh" "${HOME}/Documents/repos/"
 
 echo "[+] All done."
