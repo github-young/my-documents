@@ -132,3 +132,95 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 1. 使用deepin-wine-qq/tim/wechat: `` sudo pacman -S gnome-settings-daemon ``，然后设置 `` /usr/lib/gsd-xsettings `` 为开机启动
 1. 中文输入法: `` sudo pacman -S fcitx fcitx-rime kcm-fcitx ``
 1. (Optinal): 模仿Win10风格
+
+## Arch Server Step by Step Installation & Configuration
+
+### Pre-Installation
+
+1. Download latest Arch ISO from TUNA.
+1. Rename as "ARCH\_202102.iso" and move it to Ventoy U-disk.
+1. Prepare enough and clean disk space.
+1. Open Arch Wiki and Archfi github page on another computer as references.
+
+### Installation
+
+#### Begin
+
+1. Connect to wired connection.
+1. Boot from Ventoy, choose ARCH ISO.
+1. If ethernet is not OK, try `` systemd `` in "network configuration" in Arch Wiki; if still not OK, use USB T-ethering to install `` networkmanager ``, and then `` nmtui `` to delete, add, and activate an ethernet connection.
+
+#### Middle
+
+Use `` archfi `` to help install, or follow Arch Wiki. A few points to care:
+
+1. (Partition) 500M/fat32 for `` EFI ``, 2\*RAM/swap for `` swap ``; ALL/ext4 for `` / ``.
+1. (pacstrap) `` pacstrap linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-probe ntfs-3g sudo zsh nodejs ``
+1. (locale) `` en_US.UTF-8 ``
+
+#### End
+
+1. (before umount in archfi) Login on tty2, and `` systemctl enable dhcpcd/NetworkManager ``, then switch to archfi and re-run grub configuration.
+
+### Configuration
+
+#### First reboot
+
+1. Login as `` root ``.
+1. Edit `` /etc/ssh/sshd_config `` and change `` port ``, then `` systemctl enable sshd ``.
+1. Check IP address and remember it.
+1. Check and enable networkmanager: `` systemctl enable NetworkManager ``.
+1. Add a normal user: `` useradd -m -G "wheel" -s /usr/bin/zsh <USERNAME> ``
+1. `` reboot ``.
+
+#### Second reboot
+
+1. Make sure the server can be accessed via ssh.
+1. Put the server at suitable place.
+
+##### my-documents
+
+Prepare to use my config files.
+
+```shell
+mkdir ~/Documents/repos/me && cd ~/Documents/repos/me
+# Git configuration
+git config --global user.name "<USERNAME>"
+git config --global user.email "<EMAILADDRESS>"
+git config --global color.ui auto
+# Generate SSH key for GitHub
+ssh-keygen -t rsa -C "<EMAILADDRESS>"
+cat ~/.ssh/id_rsa.pub
+# Add the above SSH Key in GitHub
+# Check whether successfully added
+ssh git@github.com
+```
+
+Repeat for each user: root/<USERNAME>/others:
+
+```shell
+# Clone my configuration repo
+git clone git@github.com:github-young/my-documents.git 
+cd my-documents/config_file/linux
+# Install oh-my-zsh with my configuration
+./scripts/setupOMZ.sh
+
+# Copy vimrc and install Vim-Plug
+mkdir -p "~/.vim/"
+cp etc/vim/vimrc ~/.vim/
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Then Install plugins in vim
+vim ~/.vim/vimrcand # :PlugInstall
+sudo cp etc/vim/molokai.vim /usr/share/vim/vim81/colors/
+```
+
+##### my-config (private repo)
+
+Apply private configurations.
+
+```shell
+cd ~/Documents/repos/me/
+git clone git@github.com:github-young/my-config.git
+```
+
+Then copy and modify corresponding config files in the repo.

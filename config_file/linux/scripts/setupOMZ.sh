@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/zsh
+
+_WDIR="/${HOME}/Documents/repos/me/my-documents/config_file/linux"
 
 _proceedFlag="N"
 echo "[!] Install and chsh zsh first! Proceed?[y/N]:"
@@ -14,21 +16,21 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 echo "[+] zsh installed!"
 
+echo "[!] Copying my configurations"
+
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
 chmod -R 755 ~/.oh-my-zsh/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 chmod -R 755 ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
-cp ../.oh-my-zsh/themes/myagnoster.zsh-theme ~/.oh-my-zsh/themes/
+#cp ../.oh-my-zsh/themes/myagnoster.zsh-theme ~/.oh-my-zsh/themes/
 
 # copy config files
 
 cp -i ../.zshrc ~/
-ln -s ../.zsh_aliases ~/
-cp -i ../.bashrc ~/
-ln -s ../.bash_aliases ~/
+cp -i ../.zsh_aliases ~/
 
-# copy other files
+#cp -i ../.inputrc ~/
+ln  -s "${_WDIR}/scripts" "${HOME}/.scripts"
 
-cp -i ../.inputrc ~/
-ln  -s $(pwd) ~/.scripts
+echo "[+] All done."
