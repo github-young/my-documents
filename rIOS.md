@@ -188,6 +188,7 @@ mkdir ~/Documents/repos/me && cd ~/Documents/repos/me
 git config --global user.name "<USERNAME>"
 git config --global user.email "<EMAILADDRESS>"
 git config --global color.ui auto
+git config --global pull.rebase false
 # Generate SSH key for GitHub
 ssh-keygen -t rsa -C "<EMAILADDRESS>"
 cat ~/.ssh/id_rsa.pub
