@@ -521,3 +521,8 @@
    - Comment the `` listen 80 `` server block before using acme.sh.
    - Then follow the steps in the trojan-tutor
    - Then cp and mv the ``.crt `` and `` .key `` file to `` nginx `` and `` jupyter `` directory.
+
+1. ffmpeg截取视频生成gif (需要 `` ImageMagick ``):
+   ```sh
+   ffmpeg -i video.mp4 -ss 9 -t 8 -vf "fps=10,scale=480:-1:flags=lanczos" -c:v pam -f image2pipe - | convert -delay 10 - -loop 0 -layers optimize output.gif
+   ```
