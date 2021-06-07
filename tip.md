@@ -184,11 +184,6 @@
 1. WSL path:
    ``C:\Users\username\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs``
 
-1. ffmpeg:
-   ```sh
-   ffmpeg -i input.mp4 -vf "crop=width:height:x:y" -b 4000k -t 20 output.mp4
-   ```
-
 1. Windows change right-click PowerShell
    1. regedit: `` Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\Powershell\command ``
    1. right-click `` command ``-`` Permission ``-`` advanced ``
@@ -511,7 +506,7 @@
    rm *.lz4
    sudo apt update
    ```
-
+   
 1. List user installed packages in Arch:
    ```sh
    comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)
@@ -522,7 +517,17 @@
    - Then follow the steps in the trojan-tutor
    - Then cp and mv the ``.crt `` and `` .key `` file to `` nginx `` and `` jupyter `` directory.
 
-1. ffmpeg截取视频生成gif (需要 `` ImageMagick ``):
+1. ffmpeg各种用法：
+   - 裁剪尺寸、剪辑片段、压缩视频码率
+   ```sh
+   ffmpeg -i input.mp4 -vf "crop=width:height:x:y" -b 4000k -t 20 output.mp4
+   ```
+   - ffmpeg截取视频生成gif (需要 `` ImageMagick ``):
    ```sh
    ffmpeg -i video.mp4 -ss 9 -t 8 -vf "fps=10,scale=480:-1:flags=lanczos" -c:v pam -f image2pipe - | convert -delay 10 - -loop 0 -layers optimize output.gif
+   ```
+   - 截取/录制摄像头画面/视频
+   ```sh
+   sudo ffmpeg -f v4l2 -i /dev/video0 -video_size 640x480 -t 5 output.mp4
+   sudo ffmpeg -f v4l2 -i /dev/video0 -vframes 1 output.jpg
    ```
