@@ -25,11 +25,11 @@ chmod -R 755 $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 # copy config files
 
-cp -i ../.zshrc $HOME
-cp -i ../.zsh_aliases $HOME
-cp ../.oh-my-zsh/themes/myrobbyrussell.zsh-theme $HOME/.oh-my-zsh/themes/robbyrussell.zsh-theme
+cp -i ${_WDIR}/.zshrc $HOME
+cp -i ${_WDIR}/.zsh_aliases $HOME
+cp -i ${_WDIR}/.oh-my-zsh/themes/myrobbyrussell.zsh-theme $HOME/.oh-my-zsh/themes/robbyrussell.zsh-theme
 
-#cp -i ../.inputrc $HOME/
+#cp -i ${_WDIR}/.inputrc $HOME/
 ln  -s "${_WDIR}/scripts" "${HOME}/.scripts"
 ln  -s "${_WDIR}/scripts/pullAll.sh" "${HOME}/Documents/repos/"
 
