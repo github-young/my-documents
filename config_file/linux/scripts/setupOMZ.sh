@@ -18,19 +18,18 @@ echo "[+] zsh installed!"
 
 echo "[!] Copying my configurations"
 
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
-chmod -R 755 ~/.oh-my-zsh/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-chmod -R 755 ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-
-#cp ../.oh-my-zsh/themes/myagnoster.zsh-theme ~/.oh-my-zsh/themes/
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
+chmod -R 755 $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
+chmod -R 755 $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 # copy config files
 
-cp -i ../.zshrc ~/
-cp -i ../.zsh_aliases ~/
+cp -i ../.zshrc $HOME
+cp -i ../.zsh_aliases $HOME
+cp ../.oh-my-zsh/themes/myrobbyrussell.zsh-theme $HOME/.oh-my-zsh/themes/robbyrussell.zsh-theme
 
-#cp -i ../.inputrc ~/
+#cp -i ../.inputrc $HOME/
 ln  -s "${_WDIR}/scripts" "${HOME}/.scripts"
 ln  -s "${_WDIR}/scripts/pullAll.sh" "${HOME}/Documents/repos/"
 

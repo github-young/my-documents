@@ -81,9 +81,9 @@
    1. 按照官网安装(oh-my-zsh)
    ```shell
    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
-   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
+   cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
+   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
    ```
 
    1. 配置zshrc: 
@@ -102,7 +102,7 @@
    sudo pacman -S fcitx-configtool
    sudo pacman -S fcitx-rime
    ```
-   然后`` vim ~/.xprofile ``，写入：
+   然后`` vim $HOME/.xprofile ``，写入：
    ```shell
    export GTK_IM_MODULE=fcitx
    export QT_IM_MODULE=fcitx
@@ -138,7 +138,7 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 ### Pre-Installation
 
 1. Download latest Arch ISO from [TUNA](https://mirrors.tuna.tsinghua.edu.cn/).
-1. Rename as "ARCH\_202102.iso" and move it to [Ventoy](https://github.com/ventoy/Ventoy) U-disk.
+1. Rename as "ARCH202106.iso" and move it to [Ventoy](https://github.com/ventoy/Ventoy) U-disk.
 1. Prepare enough and clean disk space.
 1. Open [Arch Wiki](https://wiki.archlinux.org/index.php/installation_guide) and [archfi](https://github.com/MatMoul/archfi) on another computer as references.
 
@@ -154,16 +154,16 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 
 Use `` archfi `` to help install, or follow Arch Wiki. A few points to be noted:
 
+1. (Source) Change sources to BFSU/TUNA.
 1. (Partition) 500M/fat32 for `` EFI ``, 2\*RAM/swap for `` swap ``; ALL/ext4 for `` / ``.
-1. (Source) Change sources to TUNA.
 
 #### End
 
-Before umount in archfi, login on tty2:
+Before umount in archfi, login on tty2 with root (no password):
 
 ```shell
 pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-probe ntfs-3g sudo zsh nodejs
-arch-chroot
+arch-chroot /mnt
 systemctl enable dhcpcd/NetworkManager
 ```
 then switch to archfi and re-run grub configuration. Then umount and reboot.
@@ -176,7 +176,8 @@ then switch to archfi and re-run grub configuration. Then umount and reboot.
 1. Edit `` /etc/ssh/sshd_config `` and change `` port ``, then `` systemctl enable sshd ``.
 1. Check IP address and remember it.
 1. Check and enable networkmanager: `` systemctl enable NetworkManager ``.
-1. Add a normal user: `` useradd -m -G "wheel" -s /usr/bin/zsh <USERNAME> ``
+1. Add a normal user: `` useradd -m -G "wheel" -s /usr/bin/zsh <USERNAME> ``, and set password.
+1. Change the `` wheel `` line in `` visudo ``.
 1. `` reboot ``.
 
 #### 2. Second reboot
@@ -189,7 +190,7 @@ then switch to archfi and re-run grub configuration. Then umount and reboot.
 Prepare to use my config files.
 
 ```shell
-mkdir ~/Documents/repos/me && cd ~/Documents/repos/me
+mkdir -p $HOME/Documents/repos/me && cd $HOME/Documents/repos/me
 # Git configuration
 git config --global user.name "<USERNAME>"
 git config --global user.email "<EMAILADDRESS>"
@@ -197,7 +198,7 @@ git config --global color.ui auto
 git config --global pull.rebase false
 # Generate SSH key for GitHub
 ssh-keygen -t rsa -C "<EMAILADDRESS>"
-cat ~/.ssh/id_rsa.pub
+cat $HOME/.ssh/id_rsa.pub
 # Add the above SSH Key in GitHub
 # Check whether successfully added
 ssh git@github.com
@@ -213,12 +214,12 @@ cd my-documents/config_file/linux
 ./scripts/setupOMZ.sh
 
 # Copy vimrc and install Vim-Plug
-mkdir -p "~/.vim/"
-cp etc/vim/vimrc ~/.vim/
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir -p "$HOME/.vim/"
+cp etc/vim/vimrc $HOME/.vim/
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # Then Install plugins in vim
-vim ~/.vim/vimrcand # :PlugInstall
-sudo cp etc/vim/molokai.vim /usr/share/vim/vim81/colors/
+vim $HOME/.vim/vimrc #:PlugInstall
+sudo cp etc/vim/molokai.vim /usr/share/vim/vim*/colors/
 ```
 
 `` reboot ``
@@ -235,7 +236,7 @@ sudo cp etc/vim/molokai.vim /usr/share/vim/vim81/colors/
 Apply private configurations.
 
 ```shell
-cd ~/Documents/repos/me/
+cd $HOME/Documents/repos/me/
 git clone git@github.com:github-young/my-config.git
 ```
 
