@@ -208,8 +208,9 @@ Repeat for each user: root/\<USERNAME\>/others:
 
 ```shell
 # Clone my configuration repo
-cd $HOME/Documents/repos/me
+mkdir -p $HOME/Documents/repos/me && cd $HOME/Documents/repos/me
 git clone git@github.com:github-young/my-documents.git 
+#git clone https://github.com/github-young/my-documents.git 
 # Install oh-my-zsh with my configuration
 cd $HOME/Documents/repos/me/my-documents/config_file/linux/scripts
 ./setupOMZ.sh
@@ -220,8 +221,8 @@ mkdir -p "$HOME/.vim/"
 cp etc/vim/vimrc $HOME/.vim/
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # Then Install plugins in vim
-vim $HOME/.vim/vimrc #:PlugInstall
 sudo cp etc/vim/molokai.vim /usr/share/vim/vim*/colors/
+vim $HOME/.vim/vimrc #:PlugInstall
 ```
 
 `` reboot ``

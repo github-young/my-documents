@@ -258,5 +258,6 @@ let g:vimtex_quickfix_mode=0
 Plug 'sbdchd/neoformat'
 Plug 'prettier/vim-prettier'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_disable_startup_warning = 1
 
 call plug#end()

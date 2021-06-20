@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-_WDIR="/${HOME}/Documents/repos/me/my-documents/config_file/linux"
+_WDIR="${HOME}/Documents/repos/me/my-documents/config_file/linux"
 
 _proceedFlag="N"
 echo "[!] Install and chsh zsh first! Proceed?[y/N]:"
