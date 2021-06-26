@@ -148,13 +148,13 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 
 1. Connect to wired connection.
 1. Boot from Ventoy, choose Arch ISO.
+1. Change sources to BFSU/TUNA and `` pacman -Sy ``
 1. If ethernet is not OK, try `` systemd-networkd `` in [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd-networkd); if still not OK, use USB T-ethering to install `` networkmanager ``, and then `` nmtui `` to delete, add and activate an ethernet connection.
 
 #### Middle
 
 Use `` archfi `` to help install, or follow Arch Wiki. A few points to be noted:
 
-1. (Source) Change sources to BFSU/TUNA.
 1. (Partition) 500M/fat32 for `` EFI ``, 2\*RAM/swap for `` swap ``; ALL/ext4 for `` / ``.
 
 #### End
@@ -162,11 +162,11 @@ Use `` archfi `` to help install, or follow Arch Wiki. A few points to be noted:
 Before umount in archfi, login on tty2 with root (no password):
 
 ```shell
-pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-probe ntfs-3g sudo zsh nodejs
+pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-prober ntfs-3g sudo zsh nodejs
 arch-chroot /mnt
-systemctl enable dhcpcd/NetworkManager
+systemctl enable dhcpcd/NetworkManager/sshd
 ```
-then switch to archfi and re-run grub configuration. Then umount and reboot.
+then switch to archfi and re-run grub configuration. Check the boot loader with `` efibootmgr -v ``. Then umount and reboot.
 
 ### Configuration
 
