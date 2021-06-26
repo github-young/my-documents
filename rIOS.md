@@ -162,7 +162,7 @@ Use `` archfi `` to help install, or follow Arch Wiki. A few points to be noted:
 Before umount in archfi, login on tty2 with root (no password):
 
 ```shell
-pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-prober ntfs-3g sudo zsh nodejs
+pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-prober ntfs-3g sudo zsh nodejs cronie
 arch-chroot /mnt
 systemctl enable dhcpcd/NetworkManager/sshd
 ```
