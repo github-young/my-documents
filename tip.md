@@ -531,3 +531,10 @@
    sudo ffmpeg -f v4l2 -i /dev/video0 -video_size 640x480 -t 5 output.mp4
    sudo ffmpeg -f v4l2 -i /dev/video0 -vframes 1 output.jpg
    ```
+
+1. Backup Orange Pi into img file:
+   ```sh
+   sudo dd if=/dev/mmcblk0p1 of=OPiArmbian.img status=progress # 16G takes 10 min
+   sudo e2fsck -f OPiArmbian.img
+   sudo resize2fs -M OPiArmbian.img
+   ```
