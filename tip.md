@@ -538,3 +538,6 @@
    sudo e2fsck -f OPiArmbian.img
    sudo resize2fs -M OPiArmbian.img
    ```
+
+1. Linux create AP hotspot:
+   See ArchWiki: <https://wiki.archlinux.org/title/Software_access_point#Tools>
