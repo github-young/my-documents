@@ -513,8 +513,8 @@
    ```
 
 1. acme.sh: mainly refer to trojan-tutor, but:
-   - Comment the `` listen 80 `` server block before using acme.sh.
-   - Then follow the steps in the trojan-tutor
+   - Change the nginx sites enabled to domain.simple (same as the trojan-tutor config) and restart nginx.
+   - Then follow the steps in the trojan-tutor: remove the domain directory in `` .acme `` and try `` --staging `` at first.
    - Then cp and mv the ``.crt `` and `` .key `` file to `` nginx `` and `` jupyter `` directory.
 
 1. ffmpeg各种用法：
