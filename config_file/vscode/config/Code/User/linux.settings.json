@@ -3,6 +3,8 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     // ====== LaTeX-Workshop ======
     "latex-workshop.message.update.show": false,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
     "latex-workshop.latex.autoBuild.run": "never",
     //"latex-workshop.view.pdf.viewer": "external",
     /*"latex-workshop.view.pdf.external.command": {
