@@ -541,3 +541,9 @@
 
 1. Linux create AP hotspot:
    See ArchWiki: <https://wiki.archlinux.org/title/Software_access_point#Tools>
+
+1. Arch Linux touchpad tap disabled:
+   ```sh
+   xinput list-props "ETPS/2 Elantech Touchpad" # check the id
+   xinput set-prop "ETPS/2 Elantech Touchpad" 343 1 # set the id to 1
+   ```
