@@ -1,12 +1,22 @@
 {
+    // ====== Code Runner ======
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "php": "C:\\php\\php.exe",
+        "python": "python",
+        "perl": "perl",
+        "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+        "go": "go run",
+        "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && cl.exe $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && cl.exe $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
     // ====== Java ======
     "java.errors.incompleteClasspath.severity": "ignore",
     // ====== LaTeX-Workshop ======
     "latex-workshop.message.update.show": false,
-    "latex-workshop.message.error.show": false,
-    "latex-workshop.message.warning.show": false,
     "latex-workshop.latex.autoBuild.run": "never",
-    "latex-workshop.view.pdf.viewer": "tab",
     //"latex-workshop.view.pdf.viewer": "external",
     /*"latex-workshop.view.pdf.external.command": {
         "command": "sumatra",
@@ -112,7 +122,7 @@
         "*.hd",
         "*.idx",
         "*.ind",
-        "*.ins",
+        "*.ind",
         "*.ist",
         "*.lof",
         "*.log",
@@ -136,16 +146,12 @@
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.donotShowInfoMsg": true,
     // ====== Python ======
+    "jupyter.sendSelectionToInteractiveWindow": false,
     "python.dataScience.sendSelectionToInteractiveWindow": false,
     "python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
     "python.languageServer": "Pylance",
     "python.linting.enabled": true,
     "python.jediEnabled": false,
-    // ====== Remote SSH ======
-    "remote.SSH.remotePlatform": {
-        "ip.ip.ip.a": "linux",
-        "ip.ip.ip.b": "linux"
-    },
     // ====== SpellRight ======
     "spellright.configurationScope": "user",
     "spellright.language": [
@@ -162,21 +168,26 @@
     "vim.smartRelativeLine": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": ["J", "J"],
-            "after": ["<Esc>"]
+            "before": [
+                "J",
+                "J"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     // ====== VSCode ======
     "breadcrumbs.enabled": false,
     "editor.detectIndentation": false,
-    "editor.fontSize": 20,
+    "editor.fontSize": 24,
+    "editor.lineNumbers": "relative",
     "editor.minimap.enabled": true,
     "editor.renderControlCharacters": false,
     "editor.renderWhitespace": "all",
     "editor.suggestSelection": "first",
     "editor.tabSize": 4,
     "editor.wordWrap": "on",
-    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.autoUpdate": true,
     "files.autoSave": "onFocusChange",
@@ -198,7 +209,6 @@
     "workbench.statusBar.visible": true,
     "workbench.enableExperiments": false,
     "update.showReleaseNotes": false,
-    "update.enableWindowsBackgroundUpdates": true,
     //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -208,5 +218,6 @@
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "explorer.confirmDelete": false
 }
