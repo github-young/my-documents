@@ -8,8 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
 #ZSH_THEME="myagnoster"
+ZSH_THEME="myrobbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,7 +102,7 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 #export GOROOT=/usr/lib/go
-export PATH="$PATH:${PATH}/.local/bin:."
+export PATH="$PATH:${HOME}/.local/bin"
 
 bindkey -v
 
@@ -121,9 +121,16 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 # Auto start tmux
-if [[ $DISPLAY ]]; then
-  [[ $- != *i* ]] && return
-  if [[ -z "$TMUX" ]]; then
-    exec tmux
-  fi
-fi
+#if [[ $DISPLAY ]]; then
+#  [[ $- != *i* ]] && return
+#  if [[ -z "$TMUX" ]]; then
+#    exec tmux
+#  fi
+#fi
+
+# Auto start fbterm
+#if [[ -z "$DISPLAY" ]]; then
+#  if [[ ${TTY:0:8} == "/dev/tty" ]]; then
+#    exec fbterm
+#  fi
+#fi
