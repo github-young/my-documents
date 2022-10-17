@@ -515,6 +515,8 @@
 1. acme.sh: mainly refer to trojan-tutor, but:
    - Change the nginx sites enabled to domain.simple (same as the trojan-tutor config) and restart nginx.
    - Then follow the steps in the trojan-tutor: remove the domain directory in `` .acme `` and try `` --staging `` at first.
+      - `` acme.sh --issue -d <domain> -w /var/www/acme-challenge ``
+      - `` acme.sh --install-cert -d <domain> --key-file /etc/letsencrypt/live/<domain>.key --fullchain-file /etc/letsencrypt/live/<domain>.crt ``
    - Then cp and mv the ``.crt `` and `` .key `` file to `` nginx `` and `` jupyter `` directory.
 
 1. ffmpeg各种用法：
