@@ -9,7 +9,8 @@ Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # Alias
-New-Alias -Name ll -Value Get-ChildItem -Force
+function GCIF {Get-ChildItem -Force}
+New-Alias -Name ll -Value GCIF
 New-Alias -Name l -Value dir
 New-Alias -Name c -Value cls
 function ex {exit}
