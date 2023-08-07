@@ -140,7 +140,7 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 1. Download latest Arch ISO from [TUNA](https://mirrors.tuna.tsinghua.edu.cn/).
 1. Rename as "ARCH202106.iso" and move it to [Ventoy](https://github.com/ventoy/Ventoy) U-disk.
 1. Prepare enough and clean disk space.
-1. Open [Arch Wiki](https://wiki.archlinux.org/index.php/installation_guide) and [archfi](https://github.com/MatMoul/archfi) on another computer as references.
+1. Open [Arch Wiki](https://wiki.archlinux.org/index.php/installation_guide) on another computer as references.
 
 ### Installation
 
@@ -153,24 +153,28 @@ Then backup all file. Consider `` tar cvf BACKUP.tar /path ``
 
 #### Middle
 
-Use `` archfi `` to help install, or follow Arch Wiki. A few points to be noted:
+Use `` archinstall `` to help install, or follow Arch Wiki. A few points to be noted:
 
-1. (Partition) 500M/fat32 for `` EFI ``, 2\*RAM/swap for `` swap ``; ALL/ext4 for `` / ``.
+1. The default `` ESP `` mountpoint is `` /boot `` and therefore `` grub-mkconfig `` should be used as: `` grub-mkconfig -o /boot/grub/grub.cfg ``
+1. There is a step to input extra packages you need to install:
+```shell
+pacstrap -S /mnt linux-lts base base-devel vim git htop networkmanager dhcpcd openssh samba nginx caddy os-prober ntfs-3g sudo zsh nodejs cronie nvidia-lts
+pacman -S /mnt i3-wm dmenu ranger alacritty 
+```
 
 #### End
 
-Before umount in archfi, login on tty2 with root (no password):
+At the last step of `` archinstall ``, it will ask you whether you need to do further operations in the chroot-ed system. Confirm and do the following things:
 
 ```shell
-pacstrap /mnt linux base base-devel vim git htop networkmanager dhcpcd openssh samba nginx os-prober ntfs-3g sudo zsh nodejs cronie
-arch-chroot /mnt
+#arch-chroot /mnt
 systemctl enable dhcpcd/NetworkManager/sshd
 ```
-then switch to archfi and re-run grub configuration. Check the boot loader with `` efibootmgr -v ``. Then umount and reboot.
+then re-run grub configuration. Check the boot loader with `` efibootmgr -v ``. Then exit and reboot.
 
 ### Configuration
 
-#### 1. First reboot
+#### 1. First reboot --- add users
 
 1. Login as `` root ``.
 1. Edit `` /etc/ssh/sshd_config `` and change `` port ``, then `` systemctl enable sshd ``.
@@ -180,7 +184,7 @@ then switch to archfi and re-run grub configuration. Check the boot loader with 
 1. Change the `` wheel `` line in `` visudo ``.
 1. `` reboot ``.
 
-#### 2. Second reboot
+#### 2. Second reboot --- ssh
 
 1. Make sure the server can be accessed via ssh.
 1. Put the server at suitable place.
@@ -197,11 +201,11 @@ git config --global user.email "<EMAILADDRESS>"
 git config --global color.ui auto
 git config --global pull.rebase false
 # Generate SSH key for GitHub
-ssh-keygen -t rsa -C "<EMAILADDRESS>"
-cat $HOME/.ssh/id_rsa.pub
+ssh-keygen -t ed25519 -C "<EMAILADDRESS>"
+cat $HOME/.ssh/id_ed25519.pub
 # Add the above SSH Key in GitHub
 # Check whether successfully added
-ssh git@github.com
+ssh -T git@github.com
 ```
 
 Repeat for each user: root/\<USERNAME\>/others:
@@ -215,14 +219,7 @@ git clone git@github.com:github-young/my-documents.git
 cd $HOME/Documents/repos/me/my-documents/config_file/linux/scripts
 ./setupOMZ.sh
 
-# Copy vimrc and install Vim-Plug
-cd $HOME/Documents/repos/me/my-documents/config_file/linux
-mkdir -p "$HOME/.vim/"
-cp etc/vim/vimrc $HOME/.vim/
-curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# Then Install plugins in vim
-sudo cp etc/vim/molokai.vim /usr/share/vim/vim*/colors/
-vim $HOME/.vim/vimrc #:PlugInstall
+# cp i3 config if necessary
 ```
 
 `` reboot ``
