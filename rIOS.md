@@ -158,8 +158,9 @@ Use `` archinstall `` to help install, or follow Arch Wiki. A few points to be n
 1. The default `` ESP `` mountpoint is `` /boot `` and therefore `` grub-mkconfig `` should be used as: `` grub-mkconfig -o /boot/grub/grub.cfg ``
 1. There is a step to input extra packages you need to install:
 ```shell
-pacstrap -S /mnt linux-lts base base-devel vim git htop networkmanager dhcpcd openssh samba nginx caddy os-prober ntfs-3g sudo zsh nodejs cronie nvidia-lts
-pacman -S /mnt i3-wm dmenu ranger alacritty 
+pacstrap -S /mnt linux-lts base base-devel vim git htop networkmanager dhcpcd openssh samba nginx caddy os-prober ntfs-3g sudo zsh nodejs cronie nvidia-lts fontconfig
+pacman -S /mnt i3-wm dmenu ranger alacritty nitrogen rofi
+# install all Chinese fonts by Arch Wiki
 ```
 
 #### End
