@@ -159,7 +159,7 @@ Use `` archinstall `` to help install, or follow Arch Wiki. A few points to be n
 1. There is a step to input extra packages you need to install:
 ```shell
 pacstrap -S /mnt linux-lts base base-devel vim git htop networkmanager dhcpcd openssh samba nginx caddy os-prober ntfs-3g sudo zsh nodejs cronie nvidia-lts fontconfig
-pacman -S /mnt i3-wm dmenu ranger alacritty nitrogen rofi
+pacman -S /mnt i3-wm dmenu ranger alacritty nitrogen rofi i3lock-color
 # install all Chinese fonts by Arch Wiki
 ```
 
