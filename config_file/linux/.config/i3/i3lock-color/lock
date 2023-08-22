@@ -8,7 +8,7 @@ WRONG='#ff0000ff'
 VERIFYING='#bb00bbbb'
 INPUTING='#66ff33ee'
 
-i3lock \
+i3lock -n \
 --insidever-color=$CLEAR     \
 --ringver-color=$VERIFYING   \
 \
@@ -35,5 +35,4 @@ i3lock \
 --time-str="%H:%M"        \
 --date-str="%A, %Y-%m-%d"       \
 --keylayout 1                \
---nofork
 #--image /home/young/Pictures/DSC00198SpecSunCropQin.png
