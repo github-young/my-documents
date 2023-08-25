@@ -126,6 +126,16 @@
     // ====== Vim ======
     "vim.overrideCopy": false,
     "vim.useCtrlKeys": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j"],
+            "after": ["j", "z", "z"]
+        },
+        {
+            "before": ["k"],
+            "after": ["k", "z", "z"]
+        }
+    ],
     "vim.insertModeKeyBindings": [
         {
             "before": ["J", "J"],
@@ -135,7 +145,7 @@
     // ====== VSCode ======
     "breadcrumbs.enabled": false,
     "editor.minimap.enabled": true,
-    "editor.fontSize": 22,
+    "editor.fontSize": 16,
     "editor.suggestSelection": "first",
     "editor.renderWhitespace": "all",
     "editor.tabSize": 4,
@@ -156,10 +166,8 @@
     "search.smartCase": true,
     "window.zoomLevel": 0,
     "window.titleBarStyle": "custom",
-    "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
     "explorer.confirmDelete": false,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
