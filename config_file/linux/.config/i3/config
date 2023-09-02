@@ -38,8 +38,9 @@ exec --no-startup-id nitrogen --restore
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- "/home/young/.config/i3/i3lock-color/lock" --nofork
 #exec --no-startup-id xautolock -detectsleep -time 1 -locker 'xset s off' -notify 5 -notifier '/home/young/.config/i3/i3lock-color/lock'
-exec --no-startup-id xautolock -detectsleep -time 2 -locker '/home/young/.config/i3/i3lock-color/lock'
-#exec --no-startup-id xautolock -detectsleep -time 2 -locker 'i3lock -n --screen 1 --blur 5 --clock --indicator --time-str="%H:%M:%S" --date-str="%A, %Y-%m-%d" --keylayout 1'
+#exec --no-startup-id xautolock -detectsleep -time 1 -locker '/home/young/.config/i3/i3lock-color/lock'
+#exec --no-startup-id xautolock -detectsleep -time 1 -locker '/home/young/.config/i3/i3lock-color/lock.sh'
+#exec --no-startup-id xautolock -detectsleep -time 10 -locker '/usr/bin/i3lock -n --insidever-color="#ffffff22" --ringver-color="#bb00bbbb" --insidewrong-color="#ffffff22" --ringwrong-color="#ff0000ff" --inside-color="#00000000" --ring-color="#ff00ffcc" --line-color="#00000000" --separator-color="#ff00ffcc" --verif-color="#ee00eeee" --wrong-color="#ee00eeee" --time-color="#ee00eeee" --date-color="#ee00eeee" --layout-color="#ee00eeee" --keyhl-color="#66ff33ee" --bshl-color="#ff0000ff" --screen 1 --blur 8 --clock --indicator --time-str="%H:%M:%S" --date-str="%A, %Y-%m-%d" --keylayout 1'
 
 # i3lock screen
 #bindsym $mod+Control+l exec "i3lock -c 000000"
