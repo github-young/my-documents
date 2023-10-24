@@ -31,6 +31,9 @@ exec --no-startup-id fcitx
 # Nitrogen set wallpaper
 exec --no-startup-id nitrogen --restore
 
+# nm-applet
+exec --no-startup-id nm-applet --restore
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -201,7 +204,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-default_border pixel 2
+default_border pixel 1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
