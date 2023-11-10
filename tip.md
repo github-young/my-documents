@@ -549,3 +549,8 @@
    xinput list-props "ETPS/2 Elantech Touchpad" # check the id
    xinput set-prop "ETPS/2 Elantech Touchpad" 343 1 # set the id to 1
    ```
+
+1. Zotero renaming rules:
+   ```
+   {{ year suffix="." }}{{ title truncate="100" suffix="." }}{{publicationTitle suffix="-"}}{{authors max="1" name="family-given" join=" "}}
+   ```
