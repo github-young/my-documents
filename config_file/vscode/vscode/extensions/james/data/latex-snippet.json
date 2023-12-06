@@ -1,0 +1,621 @@
+{
+  "(": {
+    "prefix": "@(",
+    "body": "\\left( $1 \\right",
+    "description": "Insert left( ... right)"
+  },
+  "{": {
+    "prefix": "@{",
+    "body": "\\left\\{ $1\\right\\",
+    "description": "Insert left{ ... right}"
+  },
+  "[": {
+    "prefix": "@[",
+    "body": "\\left[ $1 \\right",
+    "description": "Insert left[ ... right]"
+  },
+  "Big|": {
+    "prefix": "@|",
+    "body": "\\Big|",
+    "description": "Insert a Big |"
+  },
+  "Delta": {
+    "prefix": "@D",
+    "body": "\\Delta",
+    "description": "Insert Delta"
+  },
+  "Gamma": {
+    "prefix": "@G",
+    "body": "\\Gamma",
+    "description": "Insert Gamma"
+  },
+  "Lambda": {
+    "prefix": "@L",
+    "body": "\\Lambda",
+    "description": "Insert Lambda"
+  },
+  "Omega": {
+    "prefix": "@W",
+    "body": "\\Omega",
+    "description": "Insert Omega"
+  },
+  "Phi": {
+    "prefix": "@F",
+    "body": "\\Phi",
+    "description": "Insert Phi"
+  },
+  "Psi": {
+    "prefix": "@Y",
+    "body": "\\Psi",
+    "description": "Insert Psi"
+  },
+  "Sigma": {
+    "prefix": "@S",
+    "body": "\\Sigma",
+    "description": "Insert Sigma"
+  },
+  "Theta": {
+    "prefix": "@Q",
+    "body": "\\Theta",
+    "description": "Insert Theta"
+  },
+  "Upsilon": {
+    "prefix": "@U",
+    "body": "\\Upsilon",
+    "description": "Insert Upsilon"
+  },
+  "Xi": {
+    "prefix": "@X",
+    "body": "\\Xi",
+    "description": "Insert Xi"
+  },
+  "align": {
+    "prefix": "BAL",
+    "body": "\\begin{align}\n$1\n\\end{align}",
+    "description": "Insert an align environment"
+  },
+  "align*": {
+    "prefix": "BALS",
+    "body": "\\begin{align*}\n\t$0\n\\end{align*}",
+    "description": "Insert an align* environment"
+  },
+  "alpha": {
+    "prefix": "@a",
+    "body": "\\alpha",
+    "description": "Insert alpha"
+  },
+  "bar": {
+    "prefix": "@_",
+    "body": "\\bar{$1}$0",
+    "description": "Insert a bar"
+  },
+  "beginDocument": {
+    "prefix": "BDC",
+    "body": "\\begin{document}\n$1\n\\end{document}",
+    "description": "Insert a begin document environment"
+  },
+  "beta": {
+    "prefix": "@b",
+    "body": "\\beta",
+    "description": "Insert beta"
+  },
+  "bigcap": {
+    "prefix": "@-",
+    "body": "\\bigcap",
+    "description": "Insert bigcap"
+  },
+  "bigcup": {
+    "prefix": "@+",
+    "body": "\\bigcup",
+    "description": "Insert bigcup"
+  },
+  "braket": {
+    "prefix": "bk",
+    "body": "\\braket{$1|$2|$3}$0",
+    "description": "Insert a braket environment"
+  },
+  "cases": {
+    "prefix": "BCAS",
+    "body": "\\begin{cases}\n\t$0\n\\end{cases}",
+    "description": "Insert a cases environment"
+  },
+  "cdot": {
+    "prefix": "@.",
+    "body": "\\cdot",
+    "description": "Insert \\cdot"
+  },
+  "chapter": {
+    "prefix": "SCH",
+    "body": "\\chapter{${1:${TM_SELECTED_TEXT}}}",
+    "description": "chapter"
+  },
+  "chi": {
+    "prefix": "@c",
+    "body": "\\chi",
+    "description": "Insert chi"
+  },
+  "circ": {
+    "prefix": "@@",
+    "body": "\\circ",
+    "description": "Insert circ"
+  },
+  "ddot": {
+    "prefix": "@:",
+    "body": "\\ddot{$1}$0",
+    "description": "Insert a ddot"
+  },
+  "delta": {
+    "prefix": "@d",
+    "body": "\\delta",
+    "description": "Insert delta"
+  },
+  "documentclass": {
+    "prefix": "DCL",
+    "body": "\\documentclass{${1:article}}",
+    "description": "Insert a documentclass command"
+  },
+  "dot": {
+    "prefix": "@;",
+    "body": "\\dot{$1}$0",
+    "description": "Insert a dot"
+  },
+  "emph": {
+    "prefix": "FEM",
+    "body": "\\emph{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use an emphasis font"
+  },
+  "enumerate": {
+    "prefix": "BEN",
+    "body": "\\begin{enumerate}\n\t\\item $0\n\\end{enumerate}",
+    "description": "Insert an enumerate environment"
+  },
+  "enumerateBeamer": {
+    "prefix": "BBEN",
+    "body": "\\begin{enumerate}\\vspace{5pt}\n\t\\item $0\n\\end{enumerate}",
+    "description": "Insert an enumerate environment"
+  },
+  "epsilon": {
+    "prefix": "@e",
+    "body": "\\epsilon",
+    "description": "Insert epsilon"
+  },
+  "eqnarray": {
+    "prefix": "BEQN",
+    "body": "\\begin{eqnarray}\n$0\\label{${1:eqn:<label>}}\n\\end{eqnarray}",
+    "description": "Insert an eqnarray environment"
+  },
+  "eqnarray*": {
+    "prefix": "BEQNS",
+    "body": "\\begin{eqnarray*}\n$0\\label{${1:<label>}}\n\\end{eqnarray*}",
+    "description": "Insert an eqnarray* environment"
+  },
+  "equation": {
+    "prefix": "BEQ",
+    "body": "\\begin{equation}\n$0 \\label{eq:${1:<label>}}\n\\end{equation}",
+    "description": "Insert an equation environment"
+  },
+  "equation*": {
+    "prefix": "BEQS",
+    "body": "\\begin{equation*}\n\t$0\n\\end{equation*}",
+    "description": "Insert an equation* environment"
+  },
+  "equiv": {
+    "prefix": "@=",
+    "body": "\\equiv",
+    "description": "Insert equiv symbol"
+  },
+  "eta": {
+    "prefix": "@h",
+    "body": "\\eta",
+    "description": "Insert eta"
+  },
+  "etc": {
+    "prefix": "...",
+    "body": "\\dots",
+    "description": "Insert \\dots"
+  },
+  "figure": {
+    "prefix": "BFG",
+    "body": "\\begin{figure}[!h]\n\\centering\n\\includegraphics[width=${2:width}\\textwidth]{${0:name}}\n\\caption{${3:caption}}\\label{fig:${1:<label>}}\n\\end{figure}",
+    "description": "Insert a figure environment"
+  },
+  "fraction": {
+    "prefix": "@/",
+    "body": "\\frac{$1}{$2}$0",
+    "description": "Insert a fraction"
+  },
+  "fraction2": {
+    "prefix": "@%",
+    "body": "\\frac{$1}{$2}$0",
+    "description": "Insert a fraction"
+  },
+  "frame": {
+    "prefix": "BFR",
+    "body": "\\begin{frame}{${1:<title>}}\n$0\n\\end{frame}",
+    "description": "Insert a new frame"
+  },
+  "gamma": {
+    "prefix": "@g",
+    "body": "\\gamma",
+    "description": "Insert gamma"
+  },
+  "gather": {
+    "prefix": "BGA",
+    "body": "\\begin{gather}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{gather}",
+    "description": "gather environment"
+  },
+  "gather*": {
+    "prefix": "BGAS",
+    "body": "\\begin{gather*}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{gather*}",
+    "description": "gather* environment"
+  },
+  "geq": {
+    "prefix": "@>",
+    "body": "\\geq",
+    "description": "Insert geq symbol"
+  },
+  "hat": {
+    "prefix": "@^",
+    "body": "\\Hat{$1}$0",
+    "description": "Insert a hat"
+  },
+  "infinity": {
+    "prefix": "@8",
+    "body": "\\infty",
+    "description": "Insert infinity symbol"
+  },
+  "int": {
+    "prefix": "@I",
+    "body": "\\int_{$1}^{$2}$0",
+    "description": "Insert an integral"
+  },
+  "iota": {
+    "prefix": "@i",
+    "body": "\\iota",
+    "description": "Insert iota"
+  },
+  "item": {
+    "prefix": "item",
+    "body": "\n\\item ",
+    "description": "Insert \\item on a newline"
+  },
+  "itemize": {
+    "prefix": "BIT",
+    "body": "\\begin{itemize}\n\t\\item $0\n\\end{itemize}",
+    "description": "Insert an itemize environment"
+  },
+  "itemizeBeamer": {
+    "prefix": "BBIT",
+    "body": "\\begin{itemize}\\vspace{5pt}\n\t\\item $0\n\\end{itemize}",
+    "description": "Insert an itemize environment"
+  },
+  "kappa": {
+    "prefix": "@k",
+    "body": "\\kappa",
+    "description": "Insert kappa"
+  },
+  "lambda": {
+    "prefix": "@l",
+    "body": "\\lambda",
+    "description": "Insert lambda"
+  },
+  "leq": {
+    "prefix": "@<",
+    "body": "\\leq",
+    "description": "Insert leq symbol"
+  },
+  "lowercase": {
+    "prefix": "FLC",
+    "body": "\\lowercase{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Make text lowercase (no caps)"
+  },
+  "mathbb": {
+    "prefix": "MBB",
+    "body": "\\mathbb{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a blackboard font"
+  },
+  "mathbf": {
+    "prefix": "MBF",
+    "body": "\\mathbf{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a bold font"
+  },
+  "mathcal": {
+    "prefix": "MCA",
+    "body": "\\mathcal{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a caligraphic font"
+  },
+  "mathit": {
+    "prefix": "MIT",
+    "body": "\\mathit{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use an italic text font (good for variable names)"
+  },
+  "mathrm": {
+    "prefix": "MRM",
+    "body": "\\mathrm{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a roman font"
+  },
+  "mathsf": {
+    "prefix": "MSF",
+    "body": "\\mathsf{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "math sans serif font"
+  },
+  "mathtt": {
+    "prefix": "MTT",
+    "body": "\\mathtt{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use an typewriter font"
+  },
+  "matrix": {
+    "prefix": "MAT",
+    "body": "\n\\begin{matrix}\n\\begin{pmatrix}\n$1\n\\end{pmatrix}\n\\end{matrix}",
+    "description": "Insert a matrix/vector environment"
+  },
+  "mu": {
+    "prefix": "@m",
+    "body": "\\mu",
+    "description": "Insert mu"
+  },
+  "multline": {
+    "prefix": "BMU",
+    "body": "\\begin{multline}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{multline}",
+    "description": "multline environment"
+  },
+  "multline*": {
+    "prefix": "BSMU",
+    "body": "\\begin{multline*}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{multline*}",
+    "description": "multline* environment"
+  },
+  "nonumber": {
+    "prefix": "@,",
+    "body": "\\nonumber",
+    "description": "Insert nonumber"
+  },
+  "nu": {
+    "prefix": "@n",
+    "body": "\\nu",
+    "description": "Insert nu"
+  },
+  "omega": {
+    "prefix": "@o",
+    "body": "\\omega",
+    "description": "Insert omega"
+  },
+  "paragraph": {
+    "prefix": "SPG",
+    "body": "\\paragraph{${1:${TM_SELECTED_TEXT}}}",
+    "description": "paragraph"
+  },
+  "part": {
+    "prefix": "SPA",
+    "body": "\\part{${1:${TM_SELECTED_TEXT}}}",
+    "description": "part"
+  },
+  "partial": {
+    "prefix": "@6",
+    "body": "\\partial",
+    "description": "Insert partial derivative symbol"
+  },
+  "phi": {
+    "prefix": "@f",
+    "body": "\\phi",
+    "description": "Insert phi"
+  },
+  "pi": {
+    "prefix": "@p",
+    "body": "\\pi",
+    "description": "Insert pi"
+  },
+  "psi": {
+    "prefix": "@y",
+    "body": "\\psi",
+    "description": "Insert psi"
+  },
+  "rho": {
+    "prefix": "@r",
+    "body": "\\rho",
+    "description": "Insert rho"
+  },
+  "section": {
+    "prefix": "SSE",
+    "body": "\\section{${1:${TM_SELECTED_TEXT}}}",
+    "description": "section"
+  },
+  "set font size": {
+    "prefix": "fontsize",
+    "body": "${1|\\Huge,\\huge,\\LARGE,\\Large,\\large,\\normalsize,\\small,\\footnotesize,\\scriptsize,\\tiny|}",
+    "description": "Select a font size"
+  },
+  "setminus": {
+    "prefix": "setminus",
+    "body": "\\setminus",
+    "description": "Insert a minus set"
+  },
+  "sigma": {
+    "prefix": "@s",
+    "body": "\\sigma",
+    "description": "Insert sigma"
+  },
+  "split": {
+    "prefix": "BSPL",
+    "body": "\\begin{split}\n\t$0\n\\end{split}",
+    "description": "Insert a split environment"
+  },
+  "sqrt": {
+    "prefix": "@2",
+    "body": "\\sqrt{$1}$0",
+    "description": "Insert sqrt command"
+  },
+  "subparagraph": {
+    "prefix": "SSP",
+    "body": "\\subparagraph{${1:${TM_SELECTED_TEXT}}}",
+    "description": "subparagraph"
+  },
+  "subscript": {
+    "prefix": "__",
+    "body": "_{$1}",
+    "description": "Add a subscript"
+  },
+  "subsection": {
+    "prefix": "SSS",
+    "body": "\\subsection{${1:${TM_SELECTED_TEXT}}}",
+    "description": "subsection"
+  },
+  "subsubsection": {
+    "prefix": "SS2",
+    "body": "\\subsubsection{${1:${TM_SELECTED_TEXT}}}",
+    "description": "subsubsection"
+  },
+  "sum with limits": {
+    "prefix": "suml",
+    "body": "\\sum\\limits_{$0}",
+    "description": "Insert a sum with limits"
+  },
+  "supcirc": {
+    "prefix": "@0",
+    "body": "^\\circ",
+    "description": "Insert superscript circ"
+  },
+  "superscript": {
+    "prefix": "**",
+    "body": "^{$1}",
+    "description": "Add a superscript"
+  },
+  "table (caption after tabular)": {
+    "prefix": "BTA",
+    "body": "\\begin{table}[${1:htbp}]\n\t\\centering\n\t\\begin{tabular}{${4:<columns>}}\n\t\t${0:${TM_SELECTED_TEXT}}\n\t\\end{tabular}\n\t\\caption{${2:<caption>}}\n\t\\label{${3:<label>}}\n\\end{table}",
+    "description": "table"
+  },
+  "table (caption before tabular)": {
+    "prefix": "BTB",
+    "body": "\\begin{table}[${1:htbp}]\n\t\\centering\n\t\\caption{${2:<caption>}}\n\t\\label{${3:<label>}}\n\t\\begin{tabular}{${4:<columns>}}\n\t\t${0:${TM_SELECTED_TEXT}}\n\t\\end{tabular}\n\\end{table}",
+    "description": "table"
+  },
+  "tau": {
+    "prefix": "@t",
+    "body": "\\tau",
+    "description": "Insert tau"
+  },
+  "textbf": {
+    "prefix": "FBF",
+    "body": "\\textbf{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a bold font"
+  },
+  "textit": {
+    "prefix": "FIT",
+    "body": "\\textit{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use an italic font"
+  },
+  "textnormal": {
+    "prefix": "FNO",
+    "body": "\\textnormal{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use the normal font"
+  },
+  "textrm": {
+    "prefix": "FRM",
+    "body": "\\textrm{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a roman font"
+  },
+  "textsc": {
+    "prefix": "FSC",
+    "body": "\\textsc{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a smallcaps font"
+  },
+  "textsf": {
+    "prefix": "FSF",
+    "body": "\\textsf{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a sans serif font"
+  },
+  "textsl": {
+    "prefix": "FSL",
+    "body": "\\textsl{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a slanted font"
+  },
+  "textsubscript": {
+    "prefix": "FBS",
+    "body": "\\textsubscript{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Make text a superscript"
+  },
+  "textsuperscript": {
+    "prefix": "FSS",
+    "body": "\\textsuperscript{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Make text a superscript"
+  },
+  "texttt": {
+    "prefix": "FTT",
+    "body": "\\texttt{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Use a typewriter font"
+  },
+  "theta": {
+    "prefix": "@q",
+    "body": "\\theta",
+    "description": "Insert theta"
+  },
+  "tikzpicture": {
+    "prefix": "BTP",
+    "body": "\\begin{tikzpicture}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{tikzpicture}",
+    "description": "tikzpicture"
+  },
+  "times": {
+    "prefix": "@*",
+    "body": "\\times",
+    "description": "Insert times symbol"
+  },
+  "underline": {
+    "prefix": "FUL",
+    "body": "\\underline{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Underline text"
+  },
+  "uppercase": {
+    "prefix": "FUC",
+    "body": "\\uppercase{${1:${TM_SELECTED_TEXT:text}}}",
+    "description": "Make text uppercase (all caps)"
+  },
+  "upsilon": {
+    "prefix": "@u",
+    "body": "\\upsilon",
+    "description": "Insert upsilon"
+  },
+  "usepackage": {
+    "prefix": "UPK",
+    "body": "\\usepackage{${1:<package>}}",
+    "description": "Insert a usepackage command"
+  },
+  "varepsilon": {
+    "prefix": "@ve",
+    "body": "\\varepsilon",
+    "description": "Insert varepsilon"
+  },
+  "varphi": {
+    "prefix": "@vf",
+    "body": "\\varphi",
+    "description": "Insert varphi"
+  },
+  "varsigma": {
+    "prefix": "@vs",
+    "body": "\\varsigma",
+    "description": "Insert varsigma"
+  },
+  "vartheta": {
+    "prefix": "@vq",
+    "body": "\\vartheta",
+    "description": "Insert vartheta"
+  },
+  "wedge": {
+    "prefix": "@&",
+    "body": "\\wedge",
+    "description": "Insert wedge"
+  },
+  "wrapEnv": {
+    "body": "\n\\begin{$1}\n\t${TM_SELECTED_TEXT}\n\\end{$1}",
+    "description": "Wrap selection into an environment"
+  },
+  "xi": {
+    "prefix": "@x",
+    "body": "\\xi",
+    "description": "Insert xi"
+  },
+  "zeta": {
+    "prefix": "@z",
+    "body": "\\zeta",
+    "description": "Insert zeta"
+  }
+}
