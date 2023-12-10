@@ -5,11 +5,12 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/robbyrussell.omp.json" | In
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 # Autocompletion for arrow keys
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # Alias
-function GCIF {Get-ChildItem -Force}
+function GCIF {Get-ChildItem -Force $args[0]}
 New-Alias -Name ll -Value GCIF
 New-Alias -Name l -Value dir
 New-Alias -Name c -Value cls
