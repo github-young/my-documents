@@ -1,223 +1,205 @@
 {
-    // ====== Code Runner ======
-    "code-runner.executorMap": {
-        "javascript": "node",
-        "php": "C:\\php\\php.exe",
-        "python": "python",
-        "perl": "perl",
-        "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
-        "go": "go run",
-        "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
-        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && cl.exe $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && cl.exe $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-    },
-    // ====== Java ======
-    "java.errors.incompleteClasspath.severity": "ignore",
-    // ====== LaTeX-Workshop ======
-    "latex-workshop.message.update.show": false,
-    "latex-workshop.latex.autoBuild.run": "never",
-    //"latex-workshop.view.pdf.viewer": "external",
-    /*"latex-workshop.view.pdf.external.command": {
+  // ====== Code Runner ======
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "php": "C:\\php\\php.exe",
+    "python": "python",
+    "perl": "perl",
+    "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+    "go": "go run",
+    "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && cl.exe $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && cl.exe $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  // ====== Java ======
+  "java.errors.incompleteClasspath.severity": "ignore",
+  // ====== LaTeX-Workshop ======
+  "latex-workshop.message.update.show": false,
+  "latex-workshop.latex.autoBuild.run": "never",
+  //"latex-workshop.view.pdf.viewer": "external",
+  /*"latex-workshop.view.pdf.external.command": {
         "command": "sumatra",
         "args": [
             "%PDF%"
         ]
     },*/
-    "latex-workshop.latex.magic.args": [
+  "latex-workshop.latex.magic.args": [
+    "-synctex=1",
+    "-interaction=nonstopmode",
+    "-file-line-error",
+    "-shell-escape",
+    "%DOCFILE%"
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk(xe)",
+      "tools": ["latexmk(xe)"]
+    },
+    {
+      "name": "xelatex",
+      "tools": ["xelatex"]
+    },
+    {
+      "name": "xelatex -> bibtex -> xelatex*2",
+      "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+    },
+    {
+      "name": "xelatex -> biber -> xelatex*2",
+      "tools": ["xelatex", "biber", "xelatex", "xelatex"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
         "-shell-escape",
+        // "-pdf",
         "%DOCFILE%"
-    ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk(xe)",
-            "tools": [
-                "latexmk(xe)"
-            ]
-        },
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ]
-        },
-        {
-            "name": "xelatex -> bibtex -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "xelatex -> biber -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "biber",
-                "xelatex",
-                "xelatex"
-            ]
-        }
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-shell-escape",
-                // "-pdf",
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "biber",
-            "command": "biber",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "latexmk(xe)",
-            "command": "latexmk",
-            "args": [
-                "-xelatex",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-shell-escape",
-                // "-pdf",
-                "%DOCFILE%"
-            ]
-        }
-    ],
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.acn",
-        "*.acr",
-        "*.alg",
-        "*.aux",
-        "*.bbl",
-        "*.bcf",
-        "*.blg",
-        "*.dvi",
-        "*.fdb_latexmk",
-        "*.fls",
-        "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.gz",
-        "*.hd",
-        "*.idx",
-        "*.ind",
-        "*.ind",
-        "*.ist",
-        "*.lof",
-        "*.log",
-        "*.lot",
-        "*.nav",
-        "*.out",
-        "*.out.ps",
-        "*.run.xml",
-        "*.snm",
-        "*.toc",
-        "*.xdv"
-    ],
-    // ====== MATLAB =========================
-    // "matlab.mlintpath": "C:\\D\\study\\MATLAB\\R2018b\\bin\\win64",
-    "matlab.linterEncoding": "utf8",
-    "matlab.lintOnSave": false,
-    // ====== Markdown Preview Enhanced ======
-    "markdown-preview-enhanced.enableScriptExecution": true,
-    "markdown-preview-enhanced.scrollSync": false,
-    // ====== Live Server ======
-    "liveServer.settings.donotVerifyTags": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    // ====== Python ======
-    "jupyter.sendSelectionToInteractiveWindow": false,
-    "python.dataScience.sendSelectionToInteractiveWindow": false,
-    "python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": true,
-    "python.jediEnabled": false,
-    // ====== SpellRight ======
-    "spellright.configurationScope": "user",
-    "spellright.language": [
-        "en"
-    ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext"
-    ],
-    // ====== Vim ======
-    "vim.overrideCopy": false,
-    "vim.useCtrlKeys": false,
-    "vim.smartRelativeLine": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "J",
-                "J"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    // ====== VSCode ======
-    "breadcrumbs.enabled": false,
-    "editor.detectIndentation": false,
-    "editor.fontSize": 24,
-    "editor.lineNumbers": "relative",
-    "editor.minimap.enabled": true,
-    "editor.renderControlCharacters": false,
-    "editor.renderWhitespace": "all",
-    "editor.suggestSelection": "first",
-    "editor.tabSize": 4,
-    "editor.wordWrap": "on",
-    "explorer.confirmDragAndDrop": false,
-    "extensions.autoUpdate": true,
-    "files.autoSave": "onFocusChange",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+      ]
     },
-    //"http.proxy": "http://127.0.0.1:12333",
-    //"export https_proxy": "http://127.0.0.1:12333",
-    "markdown.preview.fontSize": 18,
-    "search.smartCase": true,
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "window.zoomLevel": 0,
-    //"window.titleBarStyle": "custom",
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": true,
-    "workbench.enableExperiments": false,
-    "update.showReleaseNotes": false,
-    //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"]
     },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": ["%DOCFILE%"]
     },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "explorer.confirmDelete": false
+    {
+      "name": "latexmk(xe)",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        // "-pdf",
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.aux",
+    "*.bbl",
+    "*.bcf",
+    "*.blg",
+    "*.dvi",
+    "*.fdb_latexmk",
+    "*.fls",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.gz",
+    "*.hd",
+    "*.idx",
+    "*.ind",
+    "*.ind",
+    "*.ist",
+    "*.lof",
+    "*.log",
+    "*.lot",
+    "*.nav",
+    "*.out",
+    "*.out.ps",
+    "*.run.xml",
+    "*.snm",
+    "*.synctex.gz",
+    "*.toc",
+    "*.xdv"
+  ],
+  // ====== MATLAB =========================
+  // "matlab.mlintpath": "C:\\D\\study\\MATLAB\\R2018b\\bin\\win64",
+  "matlab.linterEncoding": "utf8",
+  "matlab.lintOnSave": false,
+  // ====== Markdown Preview Enhanced ======
+  "markdown-preview-enhanced.enableScriptExecution": true,
+  "markdown-preview-enhanced.scrollSync": false,
+  // ====== Live Server ======
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "python.dataScience.sendSelectionToInteractiveWindow": false,
+  "python.pythonPath": "C:\\D\\study\\Anaconda\\python.exe",
+  "python.languageServer": "Pylance",
+  "python.linting.enabled": true,
+  "python.jediEnabled": false,
+  // ====== SpellRight ======
+  "spellright.configurationScope": "user",
+  "spellright.language": ["en"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+  // ====== Vim ======
+  "vim.overrideCopy": false,
+  "vim.useCtrlKeys": false,
+  "vim.smartRelativeLine": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["J", "J"],
+      "after": ["<Esc>"]
+    }
+  ],
+  // ====== VSCode ======
+  "breadcrumbs.enabled": false,
+  "editor.detectIndentation": false,
+  "editor.fontSize": 20,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": true,
+  "editor.renderControlCharacters": false,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 4,
+  "editor.wordWrap": "wordWrapColumn",
+  "explorer.confirmDragAndDrop": false,
+  "extensions.autoUpdate": true,
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  //"http.proxy": "http://127.0.0.1:12333",
+  //"export https_proxy": "http://127.0.0.1:12333",
+  "markdown.preview.fontSize": 18,
+  "search.smartCase": true,
+  "telemetry.telemetryLevel": "off",
+"terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "workbench.statusBar.visible": true,
+  "workbench.enableExperiments": false,
+  "update.showReleaseNotes": false,
+  //"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDelete": false,
+  "jupyter.interactiveWindow.textEditor.executeSelection": false,
+  "workbench.colorTheme": "Default Dark+",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.rulers": [80],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+"typescript.updateImportsOnFileMove.enabled": "always",
+"latex-workshop.latex.clean.method": "glob",
+"spellright.notificationClass": "warning"
 }
