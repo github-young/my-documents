@@ -1,25 +1,26 @@
 {
+	"ignored_packages":
+	[
+	],
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"save_on_focus_lost": true,	
+	"font_size": 16,
+	"word_wrap": "true",
 	"auto_complete_triggers":
 	[
 		{
 			"characters": "<",
-			"selector": "text.html"
+			"selector": "text.html, text.xml",
+		},
+		{
+			"rhs_empty": true,
+			"selector": "punctuation.accessor",
 		},
 		{
 			"characters": "\\",
-			"selector": "text.tex.latex"
+			"selector": "text.tex.latex",
 		}
 	],
-    "draw_white_space": "all",
-	"font_size": 13,
-	"ignored_packages":
-	[
-		"Conda",
-		"Emmet",
-		"Terminal",
-		"Vintage"
-	],
-	"save_on_focus_lost": true,
+	"index_files": true,
 	"translate_tabs_to_spaces": true,
-	"word_wrap": "true"
 }
