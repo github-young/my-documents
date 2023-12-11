@@ -506,6 +506,10 @@
    rm *.lz4
    sudo apt update
    ```
+   或者
+   ```sh
+   sudo apt-cache search
+   ```
    
 1. List user installed packages in Arch:
    ```sh
@@ -533,6 +537,10 @@
    sudo ffmpeg -f v4l2 -i /dev/video0 -video_size 640x480 -t 5 output.mp4
    sudo ffmpeg -f v4l2 -i /dev/video0 -vframes 1 output.jpg
    ```
+   - 将图片转为视频
+   ```sh
+   ffmpeg -framerate 30 -i NAME_%d.jpg -c:v libx264 -r 30 NAME.mp4
+   ```
 
 1. Backup Orange Pi into img file:
    ```sh
@@ -553,4 +561,9 @@
 1. Zotero renaming rules:
    ```
    {{ year suffix="." }}{{ title truncate="100" suffix="." }}{{publicationTitle suffix="-"}}{{authors max="1" name="family-given" join=" "}}
+   ```
+
+1. Zotero Better BibTeX setting:
+   ```
+   authorLastForeIni.upper + "_" + authorLast.upper + "_" + shorttitle(2,3) + "_" + year
    ```
