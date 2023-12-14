@@ -133,10 +133,6 @@
   "python.languageServer": "Pylance",
   "python.linting.enabled": true,
   "python.jediEnabled": false,
-  // ====== SpellRight ======
-  "spellright.configurationScope": "user",
-  "spellright.language": ["en"],
-  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
   // ====== Vim ======
   "vim.overrideCopy": false,
   "vim.useCtrlKeys": false,
@@ -172,7 +168,7 @@
   "markdown.preview.fontSize": 18,
   "search.smartCase": true,
   "telemetry.telemetryLevel": "off",
-"terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "workbench.statusBar.visible": true,
   "workbench.enableExperiments": false,
   "update.showReleaseNotes": false,
@@ -199,7 +195,50 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-"typescript.updateImportsOnFileMove.enabled": "always",
-"latex-workshop.latex.clean.method": "glob",
-"spellright.notificationClass": "warning"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "latex-workshop.latex.clean.method": "glob",
+  // ====== SpellRight ======
+  "spellright.configurationScope": "user",
+  "spellright.language": [
+    "en"
+],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+],
+  "spellright.notificationClass": "information",
+  "spellright.parserByClass": {
+    "doctex": {
+        "parser": "latex"
+    }
+},
+  "spellright.latexSpellParameters": [
+    "author",
+    "title",
+    "subtitle",
+    "date",
+    "chapter",
+    "section\\*?",
+    "subsection\\*?",
+    "subsubsection\\*?",
+    "part",
+    "paragraph",
+    "subparagraph",
+    "text(rm|sf|tt|md|bf|up|it|sl|sc|normal)",
+    "underline",
+    "emph",
+    "item",
+    "footnote(text)?",
+    "caption(of)?",
+    "subcaption(of)?",
+    "multicolumn",
+    "href",
+    "hyperref",
+    "institute",
+    "frametitle",
+    "framesubtitle",
+    "begin\\{frame\\}"
+  ],
+  "spellright.ignoreRegExps": ["/[\u4e00-\u9fa5]/g"]
 }
