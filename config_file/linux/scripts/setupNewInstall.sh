@@ -2,25 +2,31 @@
 
 _WDIR="${HOME}/Documents/repos/me/my-documents/config_file/linux"
 _VIMRC_DIR="${HOME}/.vim"
+echo "HOME: ${HOME}"
+echo "WDIR: ${_WDIR}"
 
 # Prompt for confirmation
 
 _proceedFlag="N"
 echo "[!] Install and chsh zsh first! Proceed?[y/N]:"
 read _proceedFlag
-if [[ ${_proceedFlag} == "N" ]]; then
+if [[ ${_proceedFlag} != "y" ]]; then
   echo "[-] Abort."
   exit 1
 fi
 
 # Install oh-my-zsh and plugins
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
-chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting
-chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting
+if [[ -n `command -v omz` ]]; then
+  echo "OMZ not installed; installing..."
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
+  chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting
+  chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting
+else
+  echo "OMZ already installed, skipping..."
+fi
 
 echo "[+] OMZ & plugins installed!"
 
@@ -33,8 +39,8 @@ cp -i ${_WDIR}/.oh-my-zsh/themes/myrobbyrussell.zsh-theme ${HOME}/.oh-my-zsh/the
 cp -i ${_WDIR}/.oh-my-zsh/themes/myagnoster.zsh-theme ${HOME}/.oh-my-zsh/themes/
 
 #cp -i ${_WDIR}/.inputrc ${HOME}/
-ln  -s "${_WDIR}/scripts" "${HOME}/.scripts"
-ln  -s "${_WDIR}/scripts/pullAll.sh" "${HOME}/Documents/repos/"
+ln -isT "${_WDIR}/scripts" "${HOME}/.scripts"
+ln -is "${_WDIR}/scripts/pullAll.sh" "${HOME}/Documents/repos/"
 
 # copy vim/nvim configs
 mkdir -p ${HOME}/.vim/colors/
