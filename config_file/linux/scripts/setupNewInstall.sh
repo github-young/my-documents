@@ -17,7 +17,7 @@ fi
 
 # Install oh-my-zsh and plugins
 
-if [[ -n `command -v omz` ]]; then
+if [[ -z `command -v omz` ]]; then
   echo "OMZ not installed; installing..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
