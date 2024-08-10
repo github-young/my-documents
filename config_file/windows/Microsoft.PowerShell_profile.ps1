@@ -16,3 +16,5 @@ New-Alias -Name l -Value dir
 New-Alias -Name c -Value cls
 function ex {exit}
 New-Alias -Name e -Value ex
+
+Remove-Item Alias:wget
