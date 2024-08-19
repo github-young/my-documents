@@ -1,11 +1,23 @@
 {
 	"ignored_packages":
 	[
+		/*"Vintage",*/
+		/*"ChineseLocalizations",*/
+		/*"Package Control",*/
+		/*"0_package_control_loader",*/
+		/*"ConvertToUTF8",*/
+		/*"LaTeXTools",*/
+		/*"PowerShell",*/
+		/*"Typst",*/
+		/*"LSP",*/
 	],
 	"color_scheme": "Monokai.sublime-color-scheme",
-	"save_on_focus_lost": true,	
-	"font_size": 16,
-	"word_wrap": "true",
+	"font_face": "Source Han Mono SC",
+	"font_size": 13,
+	"word_wrap": true,
+	"save_on_focus_lost": true,
+	"index_files": true,
+	"translate_tabs_to_spaces": true,
 	"auto_complete_triggers":
 	[
 		{
@@ -21,6 +33,4 @@
 			"selector": "text.tex.latex",
 		}
 	],
-	"index_files": true,
-	"translate_tabs_to_spaces": true,
 }
