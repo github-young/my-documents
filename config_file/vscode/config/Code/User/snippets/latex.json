@@ -1,0 +1,70 @@
+{
+    // Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "beginDocument": {
+        "prefix": "BDC",
+        "body": "\\begin{document}\n$1\n\\end{document}",
+        "description": "Insert a begin document environment"
+    },
+    "documentclass": {
+        "prefix": "DCL",
+        "body": "\\documentclass{${1:article}}",
+        "description": "Insert a documentclass command"
+    },
+    "usepackage": {
+        "prefix": "UPKG",
+        "body": "\\usepackage{${1:<package>}}",
+        "description": "Insert a usepackage command"
+    },
+    "equation*": {
+        "prefix": "BEQS",
+        "body": "\\begin{equation*}\n\t$0\n\\end{equation*}",
+        "description": "Insert an equation* environment"
+    },
+    "eqnarray": {
+        "prefix": "BEQN",
+        "body": "\\begin{eqnarray}\n$0\\label{${1:eqn:<label>}}\n\\end{eqnarray}",
+        "description": "Insert an eqnarray environment"
+    },
+    "eqnarray*": {
+        "prefix": "BEQNS",
+        "body": "\\begin{eqnarray*}\n$0\\label{${1:<label>}}\n\\end{eqnarray*}",
+        "description": "Insert an eqnarray* environment"
+    },
+    "align*": {
+        "prefix": "BALS",
+        "body": "\\begin{align*}\n\t$0\n\\end{align*}",
+        "description": "Insert an align* environment"
+    },
+    "gather*": {
+        "prefix": "BGAS",
+        "body": "\\begin{gather*}\n\t${0:${TM_SELECTED_TEXT}}\n\\end{gather*}",
+        "description": "gather* environment"
+    },
+    "sum with limits": {
+        "prefix": "suml",
+        "body": "\\sum\\limits_{$0}",
+        "description": "Insert a sum with limits"
+    },
+    "braket": {
+        "prefix": "bk",
+        "body": "\\braket{$1|$2|$3}$0",
+        "description": "Insert a braket environment"
+    },
+    "figure": {
+        "prefix": "BFG",
+        "body": "\\begin{figure}[!h]\n\\centering\n\\includegraphics[width=${2:width}\\textwidth]{${0:name}}\n\\caption{${3:caption}}\\label{fig:${1:<label>}}\n\\end{figure}",
+        "description": "Insert a figure environment"
+    },
+}
