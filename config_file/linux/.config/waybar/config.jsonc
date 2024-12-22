@@ -119,6 +119,7 @@
         "tooltip": true
     },
     "memory": {
+        "interval": 5,
         "format": "RAM {}% "
     },
     "temperature": {
@@ -164,9 +165,10 @@
       }
     },
     "network": {
+        "interval": 2,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname} ",
+        "format-ethernet": "{ifname}   {bandwidthDownBytes}  {bandwidthUpBytes} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
