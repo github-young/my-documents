@@ -171,6 +171,7 @@ label:focus {
 #cpu {
     background-color: #2ecc71;
     color: #000000;
+    min-width: 20px;
 }
 
 #memory {
@@ -187,7 +188,7 @@ label:focus {
 
 #network {
     background-color: #2980b9;
-    min-width: 200px;
+    min-width: 160px;
 }
 
 #network.disconnected {

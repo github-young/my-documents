@@ -7,13 +7,13 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-        "yprland/submap"
+        "hyprland/window"
         //"hyprland/scratchpad"
         // "custom/media"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces",
+        "hyprland/submap"
     ],
     "modules-right": [
         // "mpd",
@@ -24,6 +24,9 @@
         "cpu",
         "memory",
         "temperature",
+        "temperature#ssdT0",
+        "temperature#ssdT1",
+        "temperature#ssdT2",
         // "backlight",
         "keyboard-state",
         "hyprland/language",
@@ -123,12 +126,33 @@
         "format": "RAM {}% "
     },
     "temperature": {
+        "interval": 5,
         // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "CPU {temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
+    },
+    "temperature#ssdT0": {
+        "interval": 5,
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 70,
+        "format": "SSD {temperatureC}°C"
+    },
+    "temperature#ssdT1": {
+        "interval": 5,
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp2_input",
+        "critical-threshold": 70,
+        "format": "{temperatureC}°C"
+    },
+    "temperature#ssdT2": {
+        "interval": 5,
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp3_input",
+        "critical-threshold": 70,
+        "format": "{temperatureC}°C"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -168,11 +192,12 @@
         "interval": 2,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}   {bandwidthDownBytes}  {bandwidthUpBytes} ",
+        "format-ethernet": " {bandwidthDownBytes:>1}{bandwidthUpBytes:>1}",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "max-length": 20
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
