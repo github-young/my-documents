@@ -8,8 +8,8 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad"
+        "yprland/submap"
+        //"hyprland/scratchpad"
         // "custom/media"
     ],
     "modules-center": [
@@ -59,7 +59,7 @@
             "unlocked": ""
         }
     },
-    "hyprland/mode": {
+    "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "hyprland/scratchpad": {
@@ -104,7 +104,7 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 4
     },
     "clock": {
         "timezone": "Asia/Shanghai",

@@ -187,6 +187,7 @@ label:focus {
 
 #network {
     background-color: #2980b9;
+    min-width: 200px;
 }
 
 #network.disconnected {
@@ -277,7 +278,7 @@ label:focus {
     background: #00b093;
     color: #740864;
     padding: 0 5px;
-    margin: 0 5px;
+    margin: 0 0px;
     min-width: 16px;
 }
 
@@ -285,7 +286,7 @@ label:focus {
     background: #97e1ad;
     color: #000000;
     padding: 0 0px;
-    margin: 0 5px;
+    margin: 0 0px;
     min-width: 16px;
 }
 
