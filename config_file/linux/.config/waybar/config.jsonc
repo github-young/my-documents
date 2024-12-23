@@ -110,8 +110,8 @@
         "timezone": "Asia/Shanghai",
         "interval": 5,
         "format": "{:%Y-%m-%d %H:%M}",
-        "format-alt": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "tooltip-format": "{:%H-%M-%S}"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%H-%M-%S}"
     },
     "cpu": {
         "interval": 5,
