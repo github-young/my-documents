@@ -21,9 +21,9 @@ if [[ -z `command -v omz` ]]; then
   echo "OMZ not installed; installing..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
-  chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
+  #chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting
-  chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting
+  #chmod -R 755 ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting
 else
   echo "OMZ already installed, skipping..."
 fi
