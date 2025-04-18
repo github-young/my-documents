@@ -1,6 +1,8 @@
 # some more ls aliases
 #alias ll='ls -alhF --sort=extension'
-alias ll='ls -alhF --color=auto'
+alias rm='echo "This is not the command you are looking for."; false'
+alias del='trash-put'
+alias ll='ls -alhF --color=auto --sort=version'
 alias l='ls -CF'
 alias cp='cp -i'
 alias e='exit'
