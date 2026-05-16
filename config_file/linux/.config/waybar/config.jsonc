@@ -12,13 +12,13 @@
         // "custom/media"
     ],
     "modules-center": [
-        "hyprland/workspaces",
-        "hyprland/submap"
     ],
     "modules-right": [
+        "hyprland/workspaces",
+        "hyprland/submap",
+        "custom/spacer",
         // "mpd",
         // "idle_inhibitor",
-        // "pulseaudio",
         "network",
         // "power-profiles-daemon",
         "cpu",
@@ -30,6 +30,7 @@
         // "backlight",
         "keyboard-state",
         "hyprland/language",
+        "pulseaudio",
         "battery",
         // "battery#bat2",
         "clock",
@@ -217,6 +218,11 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/spacer": {
+        "format": " ",
+        "interval": "once",
+        "tooltip": false
     },
     "custom/media": {
         "format": "{icon} {text}",
