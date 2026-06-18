@@ -50,4 +50,11 @@ cp -i ${_WDIR}/etc/vim/vimrc ${_VIMRC_DIR}/
 cp -i ${_WDIR}/etc/vim/coc.nvim.rc ${_VIMRC_DIR}/
 cp -i ${_WDIR}/etc/vim/molokai.vim ${_VIMRC_DIR}/colors/
 
+# copy sway/waybar configs
+mkdir -p ${HOME}/.config/sway
+mkdir -p ${HOME}/.config/waybar
+cp -i ${_WDIR}/.config/sway/config ${HOME}/.config/sway/
+cp -i ${_WDIR}/.config/waybar/* ${HOME}/.config/waybar/
+
+
 echo "[+] All done."
