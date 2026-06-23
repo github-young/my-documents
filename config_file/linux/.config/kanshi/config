@@ -1,0 +1,22 @@
+output "eDP-1" {
+  scale 1.5
+  mode 2880x1800@120.000
+  position 0,1440
+  alias $LAPTOP
+}
+
+output "HDMI-A-1" {
+  scale 1.5
+  mode 3840x2160@60.000
+  position 0,0
+  alias $G105_SEAT01
+}
+
+profile G105_seat_01 {
+	output $LAPTOP enable
+    output $G105_SEAT01 enable
+}
+
+profile home {
+	output $LAPTOP enable
+}

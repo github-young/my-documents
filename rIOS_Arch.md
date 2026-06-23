@@ -23,8 +23,12 @@ Use `` archinstall `` to help install, or follow Arch Wiki. A few points to be n
 1. The default `` ESP `` mountpoint is `` /boot `` and therefore `` grub-mkconfig `` should be used as: `` grub-mkconfig -o /boot/grub/grub.cfg ``
 1. There is a step to input extra packages you need to install:
 ```shell
+
+# for all
+pacstrap -S /mnt linux-lts base base-devel vim git htop networkmanager dhcpcd openssh sudo zsh nodejs cronie fontconfig fakeroot debugedit
+
 # for server
-pacstrap -S /mnt linux-lts base base-devel vim git htop networkmanager dhcpcd openssh samba nginx caddy os-prober ntfs-3g sudo zsh nodejs cronie fontconfig
+pacstrap -S samba nginx caddy os-prober ntfs-3g
 ```
 
 ### End
@@ -34,11 +38,9 @@ At the last step of `` archinstall ``, it will ask you whether you need to do fu
 ```shell
 #arch-chroot /mnt
 systemctl enable dhcpcd/NetworkManager/sshd
+
 # for DE with sway and kde
-pacman -S sway plasma konsole dolphin dmenu ranger alacritty nitrogen rofi fcitx5-rime autotiling network-manager-applet imv swaybg swayimg
-# install all Chinese fonts by Arch Wiki
-pacman -S python-pipx
-pipx install committizen
+pacman -S sway plasma konsole dolphin fcitx5-rime autotiling network-manager-applet imv swaybg swayimg kanshi
 ```
 then re-run grub configuration. Check the boot loader with `` efibootmgr -v ``. Then exit and reboot.
 
@@ -88,7 +90,14 @@ cd $HOME/Documents/repos/me/my-documents/config_file/linux/scripts
 #### Softwares
 
 1. Check sources list and add archlinuxcn and AUR, see [TUNA Help](https://mirrors.tuna.tsinghua.edu.cn/help/archlinuxcn/).
-1. Install the softwares in SoftwareList.
+1. Install the softwares in SoftwareList. Especially:
+```shell
+sudo pacman -Syu kanshi seafile-client
+paru -S swaysome
+sudo pacman -S python-pipx
+pipx install commitizen
+```
+1. Install all Chinese fonts by Arch Wiki
 
 #### my-config (private repo)
 
