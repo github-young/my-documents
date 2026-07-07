@@ -12,9 +12,21 @@ output "HDMI-A-1" {
   alias $G105_SEAT01
 }
 
+output "DP-2" {
+  scale 1.5
+  mode 3840x2160@59.997
+  position 0,0
+  alias $G105_SEAT12
+}
+
 profile G105_seat_01 {
 	output $LAPTOP enable
     output $G105_SEAT01 enable
+}
+
+profile G105_seat_12 {
+	output $LAPTOP enable
+    output $G105_SEAT12 enable
 }
 
 profile home {
