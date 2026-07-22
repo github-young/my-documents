@@ -6,6 +6,10 @@ BindsTo=graphical-session.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/kanshi
+Restart=always
+RestartSec=5
+StartLimitBurst=5
+StartLimitIntervalSec=60
 
 [Install]
 WantedBy=graphical-session.target
