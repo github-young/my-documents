@@ -19,6 +19,13 @@ output "DP-2" {
   alias $G105_SEAT12
 }
 
+output "DP-2 'Xiaomi Corporation Mi 27 NU 3613700002483'" {
+  scale 1.5
+  mode 3840x2160@59.997
+  position 0,0
+  alias $G106_SEAT
+}
+
 profile G105_seat_01 {
 	output $LAPTOP enable
     output $G105_SEAT01 enable
@@ -27,6 +34,11 @@ profile G105_seat_01 {
 profile G105_seat_12 {
 	output $LAPTOP enable
     output $G105_SEAT12 enable
+}
+
+profile G106_SEAT {
+	output $LAPTOP enable
+    output $G106_SEAT enable
 }
 
 profile home {
